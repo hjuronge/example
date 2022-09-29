@@ -1,0 +1,23 @@
+header{
+    min-width: 1300px;
+    height: 80px;
+    background-color: #fff;
+  }
+  header > .wrap{
+    display: flex;
+    justify-content: space-around; /*로고와 메뉴 둘 사이가 떨어짐*/
+    align-items: center; /*살짝 세로로 내려옴*/
+    padding: 0px 110px; /*가로로 여백이 생김*/
+  }
+  .navi{
+    display: flex;
+    line-height: 80px; /*마진한 것 처럼 세로로 내려옴*/
+  }
+  .navi > li{
+    margin-left: 32px; /*메뉴 글씨 사이의 간격*/
+    color: #191919;
+    font-size: 16px;
+  }
+  .navi > li.on{
+    color: #10c9c3;
+  }

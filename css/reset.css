@@ -1,0 +1,11 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: 0; color: inherit;}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.wrap{
+  width: 1300px;
+  margin: auto;
+  box-sizing: border-box;
+}

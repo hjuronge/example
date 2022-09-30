@@ -86,7 +86,7 @@
 }
 
 /*project*/
-#project{
+#project > a{
     width: 1300px;
     margin: auto;
     height: 360px;

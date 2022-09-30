@@ -1,0 +1,292 @@
+/*폰트*/
+@font-face{
+  font-family: "Play";
+  src: url(../font/Play-Regular.ttf)format('truetype');
+}
+/* 이 style를 해줘야 다른 컴퓨터에서도 폰트 사용가능 */
+@font-face{
+  font-family: "Monoton";
+  src: url(../font/Monoton-Regular.ttf)format('truetype');
+}
+
+/*초기화*/
+*{margin: 0; padding: 0;}
+ol,ul{list-style: none;}
+a{text-decoration: none; color: inherit;}
+body{
+  background-color: #111;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/*배경동영상*/
+.vid{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0px;
+  opacity: 0.9;
+}
+.vid video{
+  width: 100%;
+  min-width: 1600px;
+}
+
+/*로고*/
+h1{
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 10;
+}
+h1 img{
+  width: 280px;
+}
+
+/*header*/
+header{
+  position: fixed;
+  width: 700px;
+  height: 100%;
+  top: 0;
+  left: -420px;
+  background: linear-gradient(-45deg, #e6fc55, #b9fb05, #97e031);
+  transform: skewX(-40deg); /*header를 -40도로 기울입니다.*/
+}
+
+/*1depth*/
+.gnb{
+  width: 220px;
+  position: absolute;
+  top: 150px;
+  right: 0;
+}
+.gnb > li{
+  position: relative; /*pos:abs적용한 자식요소(sub)의 기준이 됨*/
+}
+.gnb > li > a{
+  display: block;
+  width: 220px; height: 50px;
+  font: bold 18px/3 "Play"; /*축약형-굵기,사이즈/행간 = 18/3 슬러시하면 라인하이트 됨*/
+  color: #222;
+  padding-right: 40px;
+  box-sizing: border-box;
+  text-align: right;
+}
+.gnb > li.on > a{ /*on클래스가 붙은 첫번째 li만 색상 변경*/
+  background-color: #111; color: #fff;
+}
+.gnb > li:hover > a{ /*메뉴에 hover효과 적용*/
+  background-color: #111; color: #fff;
+}
+.gnb em{ /*skewX를 40deg로 설정하여 글자를 똑바로 세워줍니다.*/
+  display: inline-block;
+  transform: skewX(40deg)!important;
+  /*!important = 최우선순위(다른 어떤걸 설정하더라도 최우선순위에는 적용안됨)*/
+}
+.gnb em i{
+  margin-right: 20px; /*About Nike옆에 아이콘에 간격 줌*/
+}
+
+/*2depth 뎁스(깊이)*/
+.sub{
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.4s; /*변환효과 설정*/
+}
+.gnb > li:hover > .sub{ /*메뉴에 마우스를 올리면 .sub메뉴가 오른쪽으로 이동하면서 나타남*/
+  opacity: 0.8;
+  left: 220px;
+}
+.sub a{
+  display: block;
+  width: 150px;
+  height: 40px;
+  background: #222;
+  border-bottom: 1px solid #b9fb05;
+  font: 16px/2.5 Arial;
+  color: #fff;
+  padding-left: 50px;
+  box-sizing: border-box;
+  margin-bottom: 3px;
+  transition: all 0.5s;
+}
+
+.sub a:hover{ /*서브메뉴에 hover효과적용*/
+  background-color: #b9fb05;
+  color: #333;
+}
+.gnb > li.on > .sub{ /*잉글리쉬-첫번째 메뉴만 화면에 고정 표시*/
+  opacity: 0.8; left: 220px;
+  top: -10px;
+}
+
+/*sns버튼 모음*/
+.sns{
+  position: fixed;
+  top: 60px;
+  right: 50px;
+}
+.sns > li{
+  float: left;
+  margin-right: 30px;
+  font-size: 25px;
+  color: #b9fb05;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+.sns > li:hover{
+  opacity: 1;
+  transform: scale(1.4); /*호버 시 살짝 커지게*/
+}
+
+/*텍스트 박스*/
+.txtBox{
+  position: fixed;
+  width: 340px;
+  height: 280px;
+  top: 200px;
+  right: 70px;
+}
+.txt{
+  position: absolute;
+  top: 200px;
+  right: 0;
+  font-size: 34px;
+  font-family: "Play";
+  color: #bbb;
+  letter-spacing: -2px;
+}
+.txt b{
+  font-weight: bold;
+  font-family: Arial;
+  color: #b9fb05;
+  margin-left: 20px;
+}
+.tit{
+  position: absolute;
+  top: 0; right: 0;
+  font-size: 160px;
+  color: #b9fb05;
+  font-family: "Monoton";
+  letter-spacing: -1px;
+}
+.tit em{
+  font-size: 50px;
+  font-family: "Play";
+  color: #fff;
+}
+
+/*하단컨텐츠*/
+.side{
+  position: fixed;
+  width: 800px;
+  height: 100%;
+  bottom: 0;
+  right: -800px;
+  background: #111;
+  opacity: 0.5;
+  transform: skewX(-40deg); /*각도를 40도줘서 꺾음*/
+  transition: all 0.5s;
+}
+.side:hover{ /*side에 마우스를 올려놓으면 화면안쪽으로 300px만큼 이동*/
+  right: -500px;
+  opacity: 0.8;
+}
+
+.side > .content{
+  width: 400px;
+  height: 100%;
+  position: absolute;
+  left: 150px;
+  bottom: 0;
+  background-color: #000;
+  transition: all 1s;
+}
+.side:hover > .content{
+  /*side요소에 마우스를 올리면 .content요소를 왼쪽으로 100px만큼 이동시켜줌.*/
+  left: 50px;
+}
+
+/*컨텐츠내 썸네일*/
+.side .content p{
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  left: 50px;
+}
+.side .content p em{
+  display: inline-block;
+  font: bold 16px/1.7 Arial;
+  color: #a0bd50;
+  transform: skewX(40deg)!important; /*최우선순위*/
+}
+.side .content p img{
+  width: 300px;
+  height: 70px;
+  opacity: 0.3;
+  transition: all 0.5s;
+}
+.side .content p img:hover{ /*이미지요소에 하이라이트 효과 적용*/
+  opacity: 1;
+}
+.side .content p:nth-child(1){ /*바텀줘서 이미지가 보임*/
+  bottom: 270px;
+  transform: translateX(200px);
+  transition: all 0.4s;
+}
+.side .content p:nth-child(2){ /*바텀줘서 이미지가 보임*/
+  bottom: 160px;
+  transform: translateX(200px);
+  transition: all 0.8s;
+}
+.side .content p:nth-child(3){ /*바텀줘서 이미지가 보임*/
+  bottom: 50px;
+  transform: translateX(200px);
+  transition: all 1.2s;
+}
+.side:hover .content p{
+  /*하단 콘텐츠 영역에 마우스를 올려 놓으면
+  아이템들(p요소)을 왼쪽으로 순차적으로 이동시킴*/
+  transform: translateX(0px);
+}
+
+/*자동 롤링 버튼*/
+.btnContents{
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  bottom: 40px;
+  left: 100px;
+  color: #b9fb05;
+  transform: skewX(40deg); /*눕힌거 원래대로 돌려줌*/
+}
+.side:hover .btnContents{ /*.side요소에 마우스를 올려놓으면 버튼을 화면밖으로 이동시켜줌.*/
+  left: 700px;
+}
+.btnContents i{
+  font-size: 60px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.btnContents i:nth-child(1){
+  animation: ani linear 1.5s infinite;
+}
+.btnContents i:nth-child(2){
+  animation: ani linear 1.5s infinite 0.5s;
+}
+.btnContents i:nth-child(3){
+  animation: ani linear 1.5s infinite 1s;
+} /*animation속성을 적용. linear:가속도, 1.5초 동안 모션, infinite:무한반복,
+딜레이 시간을 각각 다르게 적용하여 시차효과 적용*/
+@keyframes ani{
+  /*form{right: 0; transform: scale(1); opacity: 1;}=생략가능*/
+  to{right: 100; transform: scale(1.5); opacity: 0;}
+}
+/*keyframe 적용하여 화살표가 왼쪽으로 100px 지점으로
+이동하며 1.5배 커짐과 동시에 서서히 투명해짐.*/

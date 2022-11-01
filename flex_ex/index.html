@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>반응형사이트</title>
+  <!--ios전용 뷰포트-->
+  <meta name="viewport" content="width=device-width, ininitial-scale=1.0">
+
+  <!--폰트어썸 CDN-->
+  <script src="https://kit.fontawesome.com/632d3e2496.js" crossorigin="anonymous"></script>
+
+  <!--css내부정의-->
+  <style>
+   /*css 변수선언*/
+   :root{
+    --bg-b-color: #263343;
+    --bg-w-color: #efefef;
+    --text-w-color: #f0f4f5;
+    --text-b-color: #333;
+    --accent-color: #d49466;
+
+    --padding: 12px;
+
+    --font-t: 36px;
+    --font-lg: 24px;
+    --font-md: 18px;
+    --font-sm: 14px;
+    --font-mc: 12px;
+   } 
+  
+  *{margin: 0; padding: 0; box-sizing: border-box;}
+  ul{list-style: none;}
+  a{text-decoration: none; color: inherit;}
+  body{
+    font-family: 'Monaco';
+    color: var(--text-w-color); /*var 위에서 선언한 변수를 적용*/
+    line-height: 1.6;
+  }
+
+  /*header*/
+  header{
+    width: 100%;
+    background-color: var(--bg-b-color);
+    padding: var(--padding);
+    position: fixed;
+    z-index: 1;
+  }
+  header > .wrap{
+    max-width: 1200px;
+    /*브라우저 사이즈가 1200이상이 되면 header의
+      넓이가 1200으로 고정되고 가운데 정렬*/
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo{
+    font-size: var(--font-md);
+  }
+  .logo i{
+    font-size: var(--font-lg);
+    color: var(--accent-color);
+  }
+
+  .gnb{
+    display: flex;
+  }
+  .gnb li{
+    margin: 0px calc(var(--padding)*2);
+    font-size: var(--font-md);
+  }
+  .icon{
+    display: flex;
+  }
+  .icon li{
+    margin: 0px calc(var(--padding)/2);
+    font-size: var(--font-md);
+  }
+  .toggleBtn{
+    position: absolute;
+    right: 32px;
+    color: var(--accent-color);
+    cursor: pointer;
+    font-size: var(--font-md);
+    display: none;
+  }
+
+  #banner{
+    width: 100%;
+    height: 700px;
+    background: url(img/bg.png) center -60px/cover;
+    position: relative;
+  }
+  #banner > .wrap{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--text-b-color);
+  }
+  #banner h1{
+    font-size: var(--font-t);
+  }
+  #banner p{
+    font-size: var(--font-md);
+    font-weight: bold;
+  }
+  #contents{
+    width: 100%;
+    background-color: var(--bg-w-color);
+  }
+  #contents .wrap{
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 20px;
+  }
+  #contents h1{
+    font-size: var(--font-t);
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-b-color);
+  }
+  #contents .imgGroup{
+    display: flex;
+    width: 100%;
+  }
+  .imgGroup li{
+    padding: var(--padding);
+  }
+  .imgGroup img{width: 100%;}
+
+  
+  @media (max-width:1600px){ /*1600px 이하에 적용*/
+    #banner{
+      height: 500px;
+      background-position: center top;
+    }
+  }
+
+  @media (max-width: 768px){ /*768px 이하에 적용*/
+    :root{
+      --font-md: 16px;
+    }
+    .gnb li{
+      font-size: var(--padding);
+    }
+    #contents .imgGroup{flex-wrap: wrap;} /*줄바꿈*/
+    .imgGroup li{width: 50%;}
+  }
+
+  @media (max-width: 640px){ /*640px 이하에 적용*/
+    header .wrap{
+      flex-direction: column; /*정렬 방향을 세로방향으로 변경*/
+      align-items: flex-start;
+    }
+    .gnb{
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      display: none;
+    }
+    .gnb li{padding: var(--padding) 0px;}
+    .gnb li:hover{background-color: var(--accent-color);}
+    .icon{
+      width: 100%;
+      justify-content: center;
+      display: none;
+    }
+    .toggleBtn{
+      display: block;
+    }
+    .gnb.active, .icon.active{display: flex;} /*줄바꿈*/
+    .imgGroup li{width: 50%;}
+  }
+  </style>
+
+  <!--jqeury라이브러리-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
+  <!--사용자가 코딩할 jquery공간-->
+  <script>
+    $(function(){ //document.ready
+        //메뉴 버튼 클릭시
+        $(".toggleBtn").click(function(){
+          //.gnb요소와 .icon요소에 active클래스를 추가 또는 제거
+          $(".gnb, .icon").toggleClass("active");
+        });
+
+        //브라우저 사이즈가 640px 이상일 때 gnb와 icon의 active클래스를 제거.
+        $(window).resize(function(){ //브라우저 사이즈를 조절했을 때
+          var winWd = $(window).width(); //브라우저의 넓이를 구하여 winWd변수에 할당
+          console.log(winWd)
+          if(winWd > 640){ //브라우저의 넓이가 640이상일 때 gnb와 icon에 active클래스를 제거
+            $(".gnb, .icon").removeClass("active");
+          }
+        })
+      });
+  </script>
+
+</head>
+<body>
+ <header id="header">
+  <a href="#" class="toggleBtn">
+    <i class="fas fa-bars"></i>
+  </a>
+  <div class="wrap">
+    <div class="logo">
+      <i class="fab fa-drupal"></i>
+      <a href="#">COMPANY</a>
+    </div>
+    <ul class="gnb">
+      <li><a href="#">about</a></li>
+      <li><a href="#">news</a></li>
+      <li><a href="#">portfolio</a></li>
+      <li><a href="#">contact</a></li>
+      <li><a href="#">board</a></li>
+    </ul>
+    <ul class="icon">
+      <li><a href="#">
+        <i class="fab fa-twitter"></i>
+      </a></li>
+      <li><a href="#">
+        <i class="fab fa-facebook-f"></i>
+      </a></li>
+    </ul>
+  </div>
+ </header>
+
+ <section id="banner">
+    <div class="wrap">
+      <h1>TITLE</h1>
+      <p>some text...</p>
+    </div>
+ </section>
+
+ <section id="contents">
+  <div class="wrap">
+    <h1>TITLE</h1>
+    <ul class="imgGroup">
+      <li><img src="img/eye_1.jpg" alt="eye1"></li>
+      <li><img src="img/eye_2.jpg" alt="eye2"></li>
+      <li><img src="img/eye_3.jpg" alt="eye3"></li>
+      <li><img src="img/eye_4.jpg" alt="eye4"></li>
+    </ul>
+  </div>
+ </section>
+</body>
+</html>

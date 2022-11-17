@@ -203,6 +203,7 @@ opacity: 1;
   box-shadow: 0px 0px 20px #b0bdc6;
   margin-left: 1625px;
   margin-top: 15px;
+  cursor: pointer;
   position: fixed;
   /*position: fixed;*/
 }
@@ -439,18 +440,13 @@ opacity: 1;
   /*outline: 1px solid red;*/
 }
 
-.new_album > .album > .box1{
-  width: 1200px;
-  height: 275px;
-  display: flex;
-  justify-content: space-between;
-  /*outline: 1px solid coral;*/
-}
+.new_album > .album > .box1,
 .new_album > .album > .box2{
   width: 1200px;
   height: 275px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  /*outline: 1px solid coral;*/
 }
 .new_album > .box1 > .box{
   width: 200px;
@@ -511,42 +507,69 @@ opacity: 1;
   margin-top: 100px;
   cursor: pointer;
   border-radius: 20px;
-    /*outline: 1px solid blue;*/
+  /*outline: 1px solid violet;*/
 }
 
 .ad > .ad_one{
-  width: 600px;
-  display: flex;
-  margin-left: 50px;
+  /*display: flex;*/
+  width: 700px;
+  height: 200px;
+  align-items: center;
+  overflow: hidden;
+  /*overflow: hidden;*/
+  position:relative;
+  /*outline: 1px solid blue;*/
 }
-.ad > .ad_one > .ad1 img{
-  width: 200px;
-  margin-top: 15px;
+.ad > .ad_one > .one_dotArea{
+  /*width: 585px;*/
+  width: 2100px;
+  height: 100%;
+  display: flex;
+  position:relative;
+  /*outline: 1px solid green;*/
+}
+.ad_one > .one_dotArea > .box{
+  width: 700px;
+  display: flex;
+  align-items: center;
+  padding-left: 55px;
+  /*padding-left:50px;*/
+  /*outline: 1px solid tomato;*/
+}
+.ad_one > .one_dotArea > .box:nth-child(2){
+  padding-left: 140px;
+  padding-top: 10px;
+}
+.ad_one > .one_dotArea > .box:nth-child(3){
+  padding-left: 170px;
+  padding-top: 10px;
 }
 
-.ad > .ad_one > .ad2{
-  margin-top: 40px;
+.one_dotArea > .box > .ad1 img{
+  width: 200px;
+  /*margin-top: 15px;*/
+}
+.one_dotArea > .box > .ad2{
   margin-left: 40px;
 }
-
-.ad > .ad_one > .ad2 > .ad3{
+.one_dotArea > .box > .ad2 > .ad3{
   display: flex;
 }
-.ad > .ad_one > .ad2 p{
-  font-family: 'YouandiModern'; /*!!!!! 글씨체 적용X !!!!!*/
+.one_dotArea > .box > .ad2 p{
+  font-family: 'YouandiModern';
   font-size: 25px;
-  color: #666;
+  color: #888;
   margin-top: 13px;
 }
-.ad > .ad_one > .ad2 p:hover{
-  color: #000;
+.one_dotArea > .box > .ad2 p:hover{
+  color: #111;
+  font-weight: bold;
 }
-
-.ad > .ad_one > .ad2 > .ad3 > .ge_logo{
+.one_dotArea > .box > .ad2 > .ad3 > .ge_logo{
   display: flex;
   align-items: center;
 }
-.ad > .ad_one > .ad2 > .ad3 h2{
+.one_dotArea > .box > .ad2 > .ad3 h2{
   color: #0096ff;
   font-size: 18px;
   margin-left: 10px;
@@ -559,46 +582,108 @@ opacity: 1;
 .ad3 > .ge_logo > .hyun img{
   width: 160px;
   height: 32px;
-} 
-
-.ad4{
-  margin-top: 5px;
 }
-.ad4 > .dot > ul > li{
+
+/*광고 dot 버튼*/
+.ad > .ad_one .ad_dot{
+  position:absolute;  
+  top:50%;
+  transform:translateY(-50%);
+  right:10px;
+}
+
+.ad > .ad_one .ad_dot > li{
   width: 10px;
   height: 10px;
   border: 1px solid #0096ff;
   border-radius: 50%;
   margin-right: 10px;
-  margin-top: 15px;
+  margin-top: 20px;
   margin-left: 40px;
 }
-.ad4 > .dot > ul li:hover{
+.ad > .ad_one .ad_dot > li:hover,
+.ad > .ad_one .ad_dot > li.on{
   width: 10px;
   height: 10px;
   background-color: #0096ff;
+  scale: 1.4;
+  transition: all 0.3s;
+}
+
+
+/*box2 시작 숨겨진 광고 배너*/
+.ad_one > .one_dotArea > .box img{
+  border-radius: 10px;
+}
+.ad_one > .one_dotArea > .box{ /*기본 margin-left: 15px; 되어있는 상태*/
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  /*margin-left: 82px;*/
+  /* outline: 1px solid red;*/
+}
+
+.ad_one > .one_dotArea > .box p{ /*글자 간격*/
+  width: 250px;
+  margin-left: 40px;
+}
+.ad_one > .one_dotArea > .box:nth-child(1) p{
+  margin-left: 0px;
+}
+
+.ad_one > .one_dotArea > .box > .txt p:nth-child(1){
+  font-size: 25px;
+  color: #0096ff;
+  /*font-family: 'YouandiModern';
+  font-weight: bold;*/
+}
+.ad_one > .one_dotArea > .box > .txt p:nth-child(2){
+  margin-top: 20px;
+  font-size: 20px;
+  color: #888;
+  font-family: 'YouandiModern';
+}
+.ad_one > .one_dotArea > .box > .txt p:nth-child(2):hover{
+  color: #111;
+  font-weight: bold;
 }
 /*왼쪽 끝*/
 
+/*오른쪽 엠카 시작*/
 .ad > .ad_two{
-  width: 600px;
+  width: 500px;
+  height: 100%;
   display: flex;
   align-items: center;
   font-size: 20px;
   text-align: center;
   color: #666;
   line-height: 35px;
-  margin-left: 80px;
+  margin-right: 50px;
+  border-left: 1px solid #ccc;
+  padding-left: 45px;
+  box-sizing: border-box;
+  /*outline: 1px solid green;*/
 }
 .ad > .ad_two img{
   margin-right: 40px;
 }
-.ad > .ad_two > p > b{
+.ad > .ad_two > p{
+  width: 200px;
+  font-family: 'YouandiModern';
+  /*outline: 1px solid red;*/
+}
+.ad > .ad_two > p b{
   color: #0096ff;
   font-size: 26px;
+  font-family: 'tway_fly';
 }
 .ad > .ad_two > p:hover{
   color: #000;
+  font-weight: bold;
+}
+.ad_one > .box img{
+  border-radius: 10px;
 }
 
 
@@ -618,17 +703,19 @@ opacity: 1;
   width: 800px;
   font-size: 16px;
   position: relative;
+  /*outline: 1px solid violet;*/
 }
+.contents > .chart > .box > .live h1{
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
 .contents > .chart > .box > .live{
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 20px;
   /*outline: 1px solid green;*/
-}
-.contents > .chart > .box > .live h1{
-  font-size: 40px;
-  letter-spacing: 2px;
 }
 .contents > .chart > .box > .live p{
   font-size: 16px;
@@ -653,9 +740,10 @@ opacity: 1;
   flex-direction: row;
 }
 
-.contents > .chart > table{ /*???tr 마진 탑 적용 원래 안되나용 ???*/
+.contents > .chart > table{ /*??? tr 마진 탑 적용 원래 안되나용 ???*/
   width: 100%;
   border-collapse: collapse;
+  margin-top: -7px;
 }
 
 .contents > .chart > table td{
@@ -681,15 +769,6 @@ opacity: 1;
   /*opacity: 0;*/
 }
 
-/*
-.contents > .chart > table td > .dotss2{
-  position: absolute;
-  left: -px;
-  opacity: 0;
-}
-*/
-
-
 .contents > .chart > table tr:hover > td .play2{
   opacity: 1;
 }
@@ -703,31 +782,48 @@ opacity: 1;
   background-color: #333;
 }
 .contents > .chart > table tr.on td{
-  font-size: 20px;
   font-weight: 500;
-  padding: 30px 20px;
+  padding: 15px 20px;
   color: #0096ff;
   box-sizing: border-box;
 }
-/*====================================================*/
+/*===============================================*/
 
 .contents > .chart > table td:nth-child(1){
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   font-style: italic;
   text-align: center;
-}
-.contents > .chart > table td:nth-child(2) img{
-  width: 100px;
-  height: 100px;
-  border-radius: 20px;
-  opacity: 0;
-  /*opacity: 0;*/
-}
-.contents > .chart > table tr:hover img{
-  opacity: 1;
+  color: #444;
 }
 
+.contents > .chart > table td:nth-child(2){
+  font-size: 18px;
+}
+.contents > .chart > table td:nth-child(3){
+  font-size: 16px;
+}
+.contents > .chart > table td:nth-child(4) i{
+  font-size: 30px;
+  margin-right: 15px;
+  /*color: #999;*/
+}
+.contents > .chart > table td:nth-child(4){
+  color: #999;
+}
+
+.contents > .chart > table td:nth-child(2) img{ /*앨범커버*/
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  vertical-align: middle;
+  margin-left: -10px;
+  margin-right: 25px;
+  display: none;
+}
+.contents > .chart > table tr:first-child td:nth-child(2) img{
+  display:inline;
+}
 .contents > .chart > table td:nth-child(3){
   color: #666;
 }
@@ -741,8 +837,10 @@ opacity: 1;
   /*margin-left: 15px;*/
 }
 
+/* 전체 듣기 부분 시작 */
 .all{
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .all > .top200{
@@ -752,124 +850,18 @@ opacity: 1;
 }
 .all > .top200:hover{
   color: #0096ff;
+  border-bottom: 2px solid #0096ff;
+  padding-bottom: 2px;
+  box-sizing: border-box;
 }
 
 /*play_button*/
-.button > .play_button{
-  width:115px;
-  height:35px;
-  border:2px solid rgba(0,150,255,0.6);
-  border-radius: 10px;
-  float:left;
-  text-align:center;
-  cursor:pointer;
-  position:relative;
-  box-sizing:border-box;
-  overflow:hidden;
-  /*margin:0 0 40px 50px;*/
-  margin-top: 10px;
-}
-.button > .play_button a{
-  font-family: 'NanumGothic';
-  font-size:16px;
-  color:#34495e;
-  text-decoration:none;
-  line-height:50px;
-  transition:all .5s ease;
-  z-index:2;
-  position:relative;
-}
-
-.all > .button > .play_button p{
-  width: 115px;
-  line-height: 32px;
-  text-indent: 20px;
-  font-size: 13px;
-  color: #666;
-  font-weight: bold;
-  position: absolute;
-  left:0; top:0;
-  z-index: 999;
-  transition:all 0.5s;
-}
-
-.button > .play_button > .up{
-  width:115px;
-  height:35px;
-  bottom:-50px;
-  background: rgba(0,150,255,0.6);
-  position:absolute;
-  transition:all .5s ease;
-  z-index:1;
-}
-.button > .play_button:hover .up{
-  bottom:0;
-}
-.button > .play_button:hover a{
-  color:#fff;
-}
-.all > .button > .play_button img{
-  width: 20px;
-  height: 20px;
-  margin-left: -50px;
-  margin-right: 10px;
-  margin-bottom: 4px;
-}
-.all > .button > .play_button > .hover img{
-  position: absolute;
-  left: 20px;
-  top: -10px;
-  opacity: 0;
-  transition:all 0.5s;
-}
-.all > .button > .play_button:hover > .hover img{
-  opacity: 1;
-}
-.all > .button > .play_button:hover p{
-  color:#fff;
-}
-
-
-.contents > .chart > .all{
-  width: 800px;
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-}
-.contents > .chart > .all p:nth-child(3){
-  font-weight: bold;
-  margin-left: 435px;
-}
-.contents > .chart > .all > .plus{
-  width: 115px;
-  height: 35px;
-  font-weight: bold;
-  color: #666;
-  border-radius: 10px;
-  border: 2px solid rgba(0,150,255,0.6);
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  margin-right: 10px;
-  padding-top: 3px;
-  box-sizing: border-box;
-}
-.contents > .chart > .all > .plus:hover{
-  color: #0096ff;
-}
-.contents > .chart > .all > .plus img{
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-
-
-/*plus_button*/
+.button > .play_button,
 .button > .plus_button{
   width:115px;
   height:35px;
   border:2px solid rgba(0,150,255,0.6);
-  border-radius: 10px;
+  border-radius: 20px;
   float:left;
   text-align:center;
   cursor:pointer;
@@ -878,19 +870,11 @@ opacity: 1;
   overflow:hidden;
   /*margin:0 0 40px 50px;*/
   margin-top: 10px;
-  margin-left: 10px;
-}
-.button > .plus_button a{
   font-family: 'NanumGothic';
-  font-size:16px;
-  color:#34495e;
-  text-decoration:none;
-  line-height:50px;
-  transition:all .5s ease;
-  z-index:2;
-  position:relative;
+  margin-right: 15px;
 }
 
+.all > .button > .play_button p,
 .all > .button > .plus_button p{
   width: 115px;
   line-height: 32px;
@@ -904,6 +888,8 @@ opacity: 1;
   transition:all 0.5s;
 }
 
+/*채워지는 효과*/
+.button > .play_button > .up,
 .button > .plus_button > .up{
   width:115px;
   height:35px;
@@ -911,33 +897,32 @@ opacity: 1;
   background: rgba(0,150,255,0.6);
   position:absolute;
   transition:all .5s ease;
-  z-index:1;
+  z-index: 1;
 }
+.button > .play_button:hover .up,
 .button > .plus_button:hover .up{
   bottom:0;
 }
-.button > .plus_button:hover a{
-  color:#fff;
-}
-.all > .button > .plus_button img{
-  width: 20px;
-  height: 20px;
+
+.all > .button i{
   margin-left: -50px;
   margin-right: 10px;
   margin-bottom: 4px;
+  margin-top: 6px;
+  color: #0096ff;
+  font-size: 20px;
 }
-.all > .button > .plus_button > .hover img{
-  position: absolute;
-  left: 20px;
-  top: -10px;
-  opacity: 0;
-  transition:all 0.5s;
-}
-.all > .button > .plus_button:hover > .hover img{
-  opacity: 1;
-}
+
+.all > .button > .play_button:hover p,
 .all > .button > .plus_button:hover p{
   color:#fff;
+}
+.all > .button > .play_button:hover i,
+.all > .button > .plus_button:hover i{
+  color:#fff;
+  position: absolute;
+  right: 65px;
+  z-index: 2;
 }
 
 
@@ -947,6 +932,8 @@ opacity: 1;
   height: 595px;
   margin-top: 15px;
   font-family: 'tway_fly';
+  position: relative;
+  /*outline: 1px solid violet;*/
 }
 .contents > .hot_new > h1{
   font-size: 35px;
@@ -958,13 +945,20 @@ opacity: 1;
   color: #0096ff;
   font-weight: 500;
 }
-.contents > .hot_new > .box1 > img{
+.contents > .hot_new > .wrap > .box1{
+  display: flex;
   width: 280px;
-  height: 170px;
+  height: 290px;
+  /*overflow: hidden;*/
+  /*outline: 1px solid red;*/
+}
+.contents > .hot_new > .wrap > .box1 > .box > img{
+  width: 280px;
+  height: 190px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
-.contents > .hot_new > .box1 > .txt{
+.contents > .hot_new > .wrap > .box1 > .box > .txt{
   width: 280px;
   height: 100px;
   background-color: #aa78c1;
@@ -975,37 +969,125 @@ opacity: 1;
   border-end-start-radius: 20px;
   border-end-end-radius: 20px;
 }
-.hot_new > .box1 > .txt h1{
+.contents > .hot_new > .wrap > .box1 > .box:nth-child(2) > .txt{
+  background-color: #1b47eb;
+}
+.contents > .hot_new > .wrap > .box1 > .box:nth-child(3) > .txt{
+  background-color: #798ab8;
+}
+.contents > .hot_new > .wrap > .box1 > .box:nth-child(4) > .txt{
+  background-color: #38706f;
+}
+.contents > .hot_new > .wrap > .box1 > .box:nth-child(5) > .txt{
+  background-color: #40483b;
+}
+
+.hot_new > .wrap > .box1 > .box > .txt h2{
   font-size: 20px;
   font-weight: normal;
   color: #fff;
 }
-.hot_new > .box1 > .txt p{
+.hot_new > .wrap > .box1 > .box > .txt p{
   font-size: 14px;
   color: #ddb1f2;
   margin-top: 5px;
 }
-.hot_new > .box1 > .txt > .dot ul{
+.hot_new > .wrap > .box1 > .box:nth-child(2) > .txt p{
+  color: #b1c6e7;
+}
+.hot_new > .wrap > .box1 > .box:nth-child(3) > .txt p{
+  color: #c4ccf6;
+}
+.hot_new > .wrap > .box1 > .box:nth-child(4) > .txt p{
+  color: #bde2e1;
+}
+.hot_new > .wrap > .box1 > .box:nth-child(5) > .txt p{
+  color: #9aa891;
+}
+
+/*arrow*/
+.hot_new > .wrap > .arrow{
+ width: 280px;
+ height: 35px;
+ position: absolute;
+ display: flex;
+ top: 155px;
+}
+.hot_new > .wrap > .arrow > .hot_prev{
+  width: 30px;
+  height: 35px;
+  background-color:rgba(0,0,0,0.6);
+  /*background-color:rgba(0,0,0,0.8);*/
+  border-top-right-radius: 5px;
+  border-end-end-radius: 5px;
+ }
+ .hot_new > .wrap > .arrow > .hot_next{
+  width: 30px;
+  height: 35px;
+  background-color:rgba(0,0,0,0.6);
+  /*background-color:rgba(0,0,0,0.8);*/
+  position: absolute;
+  right: 0px;
+  border-top-left-radius: 5px;
+  border-end-start-radius: 5px;
+ }
+ .hot_new > .wrap > .arrow > .hot_prev img{
+  width: 11px;
+  position: absolute;
+  left: 8px;
+  margin-top: 7px;
+ }
+ .hot_new > .wrap > .arrow > .hot_next img{
+  width: 11px;
+  position: absolute;
+  left: 10px;
+  margin-top: 7px;
+ }
+
+
+/*fading 애니메이션*/
+.fade{
+  animation:fade 1.5s;
+}
+@keyframes fade{
+  from{opacity:0.4;}
+  top{opacity:1;}
+}
+
+.hot_new > .wrap > .dot{
   display: flex;
 }
-.txt > .dot > ul > li{
-  width: 7px;
-  height: 7px;
-  background-color: rgba(255,255,255,0.5);
+.hot_new > .wrap > .dot ul{
+  display: flex;
+  position: absolute;
+  top: 320px;
+  left: 25px;
+}
+.hot_new > .wrap > .dot > ul > li{
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255,255,255,0.4);
   border-radius: 50%;
   margin-right: 10px;
   margin-top: 10px;
 }
-.txt > .dot > ul > li:hover{
-  background-color: #fff;
-}
-.dot > ul > li img{ /*정지 아이콘*/
-  width: 20px;
-  height: 20px;
-  margin-left: 20px;
-  margin-top: -50px;
+.hot_new > .wrap > .dot > ul > li:hover,
+.hot_new > .wrap > .dot > ul > li.on{
+  background-color: #fdff64;
+  scale: 1.4;
+  transition: all 0.3s;
 }
 
+/*정지 아이콘 이미지*/
+.hot_new > .wrap > .dot img{ 
+  width: 18px;
+  height: 18px;
+  margin-left: 115px;
+  margin-top: -30px;
+  position: absolute;
+}
+
+/*box2*/
 .contents > .hot_new > .box2{
   display: flex;
   align-items: center;
@@ -1013,13 +1095,13 @@ opacity: 1;
   line-height: 30px;
 }
 .contents > .hot_new > .box2 img{
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
   border-radius: 20px;
 }
 .contents > .hot_new > .box2 > .txt p{
   font-size: 15px;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 .contents > .hot_new > .box2 > .txt p:nth-child(1){
   color: #0096ff;
@@ -1038,7 +1120,7 @@ opacity: 1;
   margin-top: 105px;
   margin-left: 40px;
   border-radius: 50px;
-  /*outline: 1px solid red;*/
+  /*outline: 1px solid violet;*/
 }
 .similar > .recom{
   height: 600px;
@@ -1074,7 +1156,7 @@ opacity: 1;
   height: 200px;
   margin-top: 104px;
   position: absolute;
-  top: 2092px;
+  top: 2119px;
   left: 1320px;
   transition: all 0.3s;
   opacity: 0;
@@ -1105,12 +1187,10 @@ opacity: 1;
 }
 
 
-
-
 /*================================= editor Pick =================================*/
 .editorPick{
   width: 1200px;
-  height: 620px;
+  height: 600px;
   display: flex;
   flex-wrap: wrap;
   margin-top: 100px;
@@ -1125,26 +1205,22 @@ opacity: 1;
 }
 .editorPick > .pick{
   width: 1200px;
-  height: 535px;
+  height: 520px;
   display: flex;
+  margin-top: 40px;
   /*outline: 1px solid blue;*/
 }
 .pick > .bigPick{
   width: 600px;
 }
-.pick > .bigPick p:nth-child(2){
-  font-size: 21px;
-  color: #666;
-  margin-top: 13px;
-}
-.pick > .bigPick p:nth-child(3){
-  font-size: 25px;
-  font-weight: 500;
-  color: #333;
+.pick > .bigPick p{
   margin-top: 10px;
 }
-.pick > .bigPick p:nth-child(3):hover{
+.pick > .bigPick p:nth-child(2){
+  font-size: 22px;
+  /*color: #666;*/
   color: #0096ff;
+  margin-top: 13px;
 }
 .pick > .bigPick img{
   border-radius: 20px;
@@ -1154,7 +1230,7 @@ opacity: 1;
   width: 600px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  /*justify-content: space-evenly;*/
 }
 .pick > .smallPick > .box:nth-child(1){
   margin-left: 30px;
@@ -1171,48 +1247,37 @@ opacity: 1;
   margin-top: 10px;
 }
 
+.pick > .smallPick p{
+  margin-top: 10px;
+}
 .pick > .smallPick p:nth-child(2){
   font-size: 16px;
   color: #666;
-  margin-top: 23px;
+  margin-top: 20px;
 }
-.pick > .smallPick p:nth-child(3){
+.pick > .smallPick p:nth-child(2){
   font-size: 20px;
   font-weight: 500;
   color: #333;
   margin-top: 10px;
 }
-.pick > .smallPick p:nth-child(3):hover{
+.pick > .smallPick > .box > .text > p:nth-child(2):hover{
   color: #0096ff;
 }
-
+.pick > .smallPick > .box:nth-child(3),
+.pick > .smallPick > .box:nth-child(4){
+  margin-top: 25px;
+}
 .pick > .smallPick img{
   border-radius: 20px;
+  /*outline: 1px solid red;*/
 }
-
-
-/*
-.pick1 > .box > .click .overlay{
-  width: 250px;
-  height: 120px;
-  position: absolute;
-  top: -240px;
-  background: rgba(0,0,0,0.7) url(../img/play1.png) no-repeat center;
-  background-size: 40px;
-  opacity: 0;
-  transition: all 0.3s;
-}
-.pick1 > .box > .click:hover .overlay{
-  opacity: 1;
-  cursor: pointer;
-}
-*/
 
 
 /*================================= genieTv =================================*/
 .genieTv{
   width: 1200px;
-  height: 400px;
+  height: 390px;
   margin-left: 40px;
   margin-top: 100px;
   position: relative;
@@ -1254,6 +1319,22 @@ opacity: 1;
 .genieTv > .txt > .more p{
   color: #0096ff;
 }
+
+.genieTv > .txt > .more p:after {/*after 가상요소*/
+  display:block;/*a요소를 블록 요소라고 선언*/
+  width: 94px;
+  /*카테고리 메뉴 밑줄의 크기를 동일하게 주기 위해 width 설정*/
+  /*혹시 a요소 크기만큼 생기길 바란다면 width 삭제*/
+  content: ''; /*comtent안은 밑줄 디자인을 위해 비워두세요.*/
+  border-bottom: solid 2px #0096ff;
+  padding-bottom: 2px;
+  transform: scaleX(0); /*크기를 0으로 줌으로써 평상시엔 밑줄 없음*/
+  transition: transform 0.3s ease-in-out; /*변형 방식*/
+}
+.genieTv > .txt > .more p:hover:after {
+  transform: scaleX(1); /*a 속성에 hover시 after를 기존 크기로 변경*/
+}
+
 .genieTv > .txt > .more img{
   margin-left: 15px;
   rotate: 180deg;
@@ -1265,6 +1346,7 @@ opacity: 1;
   margin-top: 90px;
   margin-left: 2px;
   cursor: pointer;
+  z-index: 1;
 }
 .genieTv > .arrow > .left_prev > .prev2 img{
   position: absolute;
@@ -1299,6 +1381,7 @@ opacity: 1;
   align-items: center;
   margin-left: -400px;
   /*outline: 1px solid blue;*/
+  position:relative;
 }
 .tvSlide > .box > .boxImg img{
   width: 360px;
@@ -1358,7 +1441,7 @@ opacity: 1;
 /*================================= new video =================================*/
 .new_music_video{
   width: 1200px;
-  height: 285px;
+  height: 300px;
   margin-left: 40px;
   margin-top: 70px;
   /*outline: 1px solid violet;*/

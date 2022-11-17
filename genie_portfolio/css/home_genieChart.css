@@ -945,16 +945,18 @@ input[id="check11"]:checked + label::after{
 }
 
 
-/*=================================== right_area -> thisTime ===================================*/
-.thisTime{
+/*=================================== right_area -> popular_music_color ===================================*/
+.popular_music_color{
   margin-top: 70px;
   height: 420px;
   /*outline: 1px solid coral;*/
 }
-.thisTime h2{
+.popular_music_color h2{
   font-size: 35px;
 }
-.thisTime > .thisMusic{
+.popular_music_color > .music_color{
+  width: 340px;
+  height: 340px;
   margin-top: 40px;
   height: 340px;
   display: flex;
@@ -963,14 +965,8 @@ input[id="check11"]:checked + label::after{
   position: relative;
   cursor: pointer;
 }
-.thisTime > .thisMusic img{
-  border-radius: 20px;
-}
-.thisTime > .thisMusic p{
-  font-size: 20px;
-}
 
-.thisTime > .thisMusic > .love > .line{
+.popular_music_color > .music_color > .pink > .line{
   width: 170px;
   height: 170px;
   border: 2px solid #0096ff;
@@ -980,7 +976,7 @@ input[id="check11"]:checked + label::after{
   top: -7px;
   opacity: 0;
 }
-.thisTime > .thisMusic > .rest > .line{
+.popular_music_color > .music_color > .green > .line{
   width: 170px;
   height: 170px;
   border: 2px solid #0096ff;
@@ -990,7 +986,7 @@ input[id="check11"]:checked + label::after{
   top: -7px;
   opacity: 0;
 }
-.thisTime > .thisMusic > .break > .line{
+.popular_music_color > .music_color > .gold > .line{
   width: 170px;
   height: 170px;
   border: 2px solid #0096ff;
@@ -1000,7 +996,7 @@ input[id="check11"]:checked + label::after{
   bottom: 3px;
   opacity: 0;
 }
-.thisTime > .thisMusic > .drive > .line{
+.popular_music_color > .music_color > .blue > .line{
   width: 170px;
   height: 170px;
   border: 2px solid #0096ff;
@@ -1011,97 +1007,110 @@ input[id="check11"]:checked + label::after{
   opacity: 0;
 }
 
-.thisMusic > .love > .gradation{
+.music_color > .pink > .color{
   width: 160px;
   height: 160px;
-  position: absolute;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0) 10%,
-    rgba(223,122,157,0) 60%,
-    rgba(223,122,157,1) 100%);
   border-radius: 20px;
+  background-color: #eba3ae;
 }
-.thisMusic > .rest > .gradation{
+.music_color > .green > .color{
   width: 160px;
   height: 160px;
-  position: absolute;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0) 10%,
-    rgba(255,255,255,0) 60%,
-    rgba(62,84,73,1) 100%);
   border-radius: 20px;
+  background-color: #88ca9a;
 }
-.thisMusic > .break > .gradation{
+.music_color > .gold > .color{
   width: 160px;
   height: 160px;
-  position: absolute;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0) 10%,
-    rgba(255,255,255,0) 60%,
-    rgba(42,59,65,1));
   border-radius: 20px;
+  background-color: #ffba48;
 }
-.thisMusic > .drive > .gradation{
+.music_color > .blue > .color{
   width: 160px;
   height: 160px;
-  position: absolute;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0) 10%,
-    rgba(0,0,0,0) 60%,
-    rgba(0,0,0,1));
   border-radius: 20px;
+  background-color: #98b3e6;
 }
 
-.thisTime > .thisMusic > .love:hover > .line{
+.popular_music_color > .music_color > .pink:hover > .line{
   opacity: 1;
 }
-.thisTime > .thisMusic > .rest:hover > .line{
+.popular_music_color > .music_color > .green:hover > .line{
   opacity: 1;
 }
-.thisTime > .thisMusic > .break:hover > .line{
+.popular_music_color > .music_color > .gold:hover > .line{
   opacity: 1;
 }
-.thisTime > .thisMusic > .drive:hover > .line{
+.popular_music_color > .music_color > .blue:hover > .line{
   opacity: 1;
 }
-.thisTime > .thisMusic > .love:hover{
+.popular_music_color > .music_color > .pink:hover{
   scale: 1.1;
 }
-.thisTime > .thisMusic > .rest:hover{
+.popular_music_color > .music_color > .green:hover{
   scale: 1.1;
 }
-.thisTime > .thisMusic > .break:hover{
+.popular_music_color > .music_color > .gold:hover{
   scale: 1.1;
 }
-.thisTime > .thisMusic > .drive:hover{
+.popular_music_color > .music_color > .blue:hover{
   scale: 1.1;
 }
 
-.thisTime > .thisMusic > .love p{
+.popular_music_color > .music_color h6{
   color: #fff;
+  font-size: 22px;
+  font-weight: normal;
   position: absolute;
-  top: 128px;
-  left: 98px;
+  line-height: 30px;
 }
-.thisTime > .thisMusic > .rest p{
+.popular_music_color > .music_color b{
   color: #fff;
+  font-size: 25px;
+  font-weight: normal;
   position: absolute;
-  top: 128px;
-  right: 10px;
 }
-.thisTime > .thisMusic > .break p{
+.popular_music_color > .music_color p{
   color: #fff;
+  font-size: 16px;
   position: absolute;
-  bottom: 22px;
-  left: 98px;
+  font-family: 'YouandiModern';
 }
-.thisTime > .thisMusic > .drive p{
-  color: #fff;
-  position: absolute;
-  bottom: 22px;
-  right: 10px;
+
+.popular_music_color > .music_color > .pink h6{
+  width: 160px;
+  top: 55px;
+  left: 8px;
+}
+.popular_music_color > .music_color > .green h6{
+  width: 160px;
+  top: 55px;
+  right: -8px;
+}
+.popular_music_color > .music_color > .gold h6{
+  width: 160px;
+  bottom: 85px;
+  left: 18px;
+}
+.popular_music_color > .music_color > .blue h6{
+  width: 160px;
+  bottom: 85px;
+  right: -8px;
+}
+
+.popular_music_color > .music_color > .pink p{
+  top: 130px;
+  left: 28px;
+}
+.popular_music_color > .music_color > .green p{
+  top: 130px;
+  right: 15px;
+}
+.popular_music_color > .music_color > .gold p{
+  bottom: 24px;
+  left: 57px;
+}
+.popular_music_color > .music_color > .blue p{
+  bottom: 24px;
+  right: 15px;
 }

@@ -596,6 +596,7 @@
   /*혹시 a요소 크기만큼 생기길 바란다면 width 삭제*/
   content: ''; /*comtent안은 밑줄 디자인을 위해 비워두세요.*/
   border-bottom: solid 2px #0096ff;
+  padding-bottom: 2px;
   transform: scaleX(0); /*크기를 0으로 줌으로써 평상시엔 밑줄 없음*/
   transition: transform 0.3s ease-in-out; /*변형 방식*/
 }
@@ -647,49 +648,60 @@
   cursor: pointer;
 }
 .video > ul > li{
-  border-radius: 20px;
   overflow: hidden;
   display: flex;
   align-items: center;
 }
 
+.video > ul:nth-child(1) > li:nth-child(1),
+.video > ul:nth-child(2) > li:nth-child(1),
+.video > ul:nth-child(3) > li:nth-child(1),
+.video > ul:nth-child(4) > li:nth-child(1),
+.video > ul:nth-child(5) > li:nth-child(1){
+  border-radius: 20px;
+}
 .video > ul > li:nth-child(1){
-  width: 350px;
+  width: 410px;
   height: 190px;
 }
 .video > ul > li:nth-child(1) img{
-  width: 370px;
+  width: 410px;
   height: 190px;
-  margin-left: -10px;
+  margin-left: -26px;
 }
 .video > ul img{
-  border-radius: 20px;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
-.video > ul > li:hover > img{
-  scale: 1.1;
+.video > ul:nth-child(1) > li:nth-child(1) img:hover,
+.video > ul:nth-child(2) > li:nth-child(1) img:hover,
+.video > ul:nth-child(3) > li:nth-child(1) img:hover,
+.video > ul:nth-child(4) > li:nth-child(1) img:hover,
+.video > ul:nth-child(5) > li:nth-child(1) img:hover{
+  scale: 1.2
 }
+
 .video > ul > li:nth-child(2){
-  width: 90px;
-  margin-left: 80px;
+  width: 70px;
+  margin-left: 30px;
   font-size: 30px;
   text-align: center;
 }
+
 .video > ul:nth-child(2) > li:nth-child(1) img{
-  margin-left: -20px;
+  margin-left: -40px;
 }
 .video > ul:nth-child(3) > li:nth-child(1) img{
-  margin-left: -35px;
+  margin-left: -50px;
 }
 .video > ul:nth-child(4) > li:nth-child(1) img{
-  margin-left: -63px;
+  margin-left: -80px;
 }
 .video > ul:nth-child(5) > li:nth-child(1) img{
-  margin-left: -30px;
+  margin-left: -50px;
 }
 
 .video > ul > li:nth-child(3){
-  width: 300px;
+  width: 400px;
   line-height: 35px;
 }
 .video > ul > li:nth-child(3) > ul > li:nth-child(1){
@@ -697,14 +709,24 @@
 }
 .video > ul > li:nth-child(3) > ul > li:nth-child(2){
   color: #666;
-  font-size: 22px;
+  font-size: 20px;
 }
 .video > ul > li:nth-child(3) > ul > li:nth-child(3){
   color: #aaa;
   font-size: 20px;
 }
+.video > ul > li > i{
+  color: #aaa;
+  font-size: 30px;
+  margin-right: 20px;
+}
+.video > ul > li > i:hover{
+  color: #0096ff;
+  transition: all 0.3s;
+}
+
 .video > ul > li:nth-child(4){
-  width: 280px;
+  width: 300px;
   font-size: 20px;
   color: #666;
   margin-left: 220px;
@@ -714,7 +736,7 @@
   margin-right: 10px;
 }
 .video > ul > li:nth-child(5){
-  width: 150px;
+  width: 270px;
   font-size: 20px;
   color: #666;
 }
@@ -723,7 +745,7 @@
   margin-right: 10px;
 }
 .video > ul > li:nth-child(6){
-  width: 100px;
+  width: 80px;
   font-size: 20px;
   color: #666;
 }

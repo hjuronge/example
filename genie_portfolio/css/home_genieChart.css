@@ -655,7 +655,7 @@ input[id="check11"]:checked + label::after{
 .popularity_search > .popularity > .search{
   width: 320px;
   margin: auto;
-  padding: 28px 10px 0px 0px; /*상 우 하 좌*/
+  padding: 28px 11px 0px 0px; /*상 우 하 좌*/
   box-sizing: border-box;
 }
 .popularity > .search > ul{
@@ -675,6 +675,8 @@ input[id="check11"]:checked + label::after{
   font-size: 22px;
   width: 200px;
   box-sizing: border-box;
+  font-family: 'YouandiModern';
+  font-weight: bold;
 }
 .popularity > .search > ul > li:nth-child(3){
   color: #666;
@@ -806,6 +808,8 @@ input[id="check11"]:checked + label::after{
 .monthlyTop > .artist p{
   width: 110px;
   font-size: 20px;
+  font-family: 'YouandiModern';
+  font-weight: bold;
 }
 
 .monthlyTop > .artist> .girlGroup1 > .line{
@@ -923,25 +927,25 @@ input[id="check11"]:checked + label::after{
   color: #fff;
   position: absolute;
   top: 128px;
-  left: 40px;
+  left: 45px;
 }
 .monthlyTop > .artist > .girlGroup2 p{
   color: #fff;
   position: absolute;
   top: 128px;
-  right: -40px;
+  right: -45px;
 }
 .monthlyTop > .artist > .girlGroup3 p{
   color: #fff;
   position: absolute;
   bottom: 20px;
-  left: 90px;
+  left: 95px;
 }
 .monthlyTop > .artist > .girlGroup4 p{
   color: #fff;
   position: absolute;
   bottom: 20px;
-  right: -20px;
+  right: -25px;
 }
 
 
@@ -1059,15 +1063,15 @@ input[id="check11"]:checked + label::after{
 
 .popular_music_color > .music_color h6{
   color: #fff;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: normal;
   position: absolute;
   line-height: 30px;
+  font-family: 'YouandiModern';
 }
 .popular_music_color > .music_color b{
   color: #fff;
-  font-size: 25px;
-  font-weight: normal;
+  font-size: 24px;
   position: absolute;
 }
 .popular_music_color > .music_color p{
@@ -1079,23 +1083,23 @@ input[id="check11"]:checked + label::after{
 
 .popular_music_color > .music_color > .pink h6{
   width: 160px;
-  top: 55px;
-  left: 8px;
+  top: 50px;
+  left: 12px;
 }
 .popular_music_color > .music_color > .green h6{
   width: 160px;
-  top: 55px;
-  right: -8px;
+  top: 50px;
+  right: -12px;
 }
 .popular_music_color > .music_color > .gold h6{
   width: 160px;
-  bottom: 85px;
-  left: 18px;
+  bottom: 90px;
+  left: 24px;
 }
 .popular_music_color > .music_color > .blue h6{
   width: 160px;
-  bottom: 85px;
-  right: -8px;
+  bottom: 90px;
+  right: -12px;
 }
 
 .popular_music_color > .music_color > .pink p{

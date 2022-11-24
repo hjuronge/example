@@ -1,0 +1,246 @@
+@font-face{
+  font-family: 'NanumSquareNeo';
+  src: url(../font/NanumSquareNeo-bRg.ttf) format('truetype');
+}
+@font-face{
+  font-family: 'Cafe24Ssurround';
+  src: url(../font/Cafe24Ssurround.ttf) format('truetype');
+}
+
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: 0; color: inherit;}
+body{
+  font-family: 'NanumSquareNeo';
+  color: #111;
+}
+
+/*===============================================================================*/
+
+/* adver 광고 */
+.adver{
+  position: relative;
+  color: #fff;
+}
+.adver > .logo img{
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  z-index: 9;
+}
+.adver h1{
+  font-size: 60px;
+  color: #d9262d;
+  -webkit-text-stroke: 1.5px #fff;
+  font-family: 'Cafe24Ssurround';
+  margin-bottom: 20px;
+}
+.adver p{
+  font-size: 30px;
+}
+.adver > .title > .more{
+  width: 200px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.adver > .title > .more p{
+  font-size: 20px;
+  margin-left: 20px;
+  color: #ffeb06;
+}
+.adver > .title > .more img{
+  width: 30px;
+  cursor: pointer;
+}
+.adver > .title > .more img:hover{
+  transform: translateX(-50px);
+}
+.adver > .title{
+  position: absolute;
+  top: 190px;
+  left: 100px;
+}
+.adver > video{
+  width: 100%;
+  object-fit: cover;
+  /*object-fit: fill;*/
+}
+
+/*===================================== haribo_produce ======================================*/
+.haribo_produce{
+  padding: 100px 0px;
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  /* outline: 1px solid seagreen; */
+}
+.meet{
+  transition: all 0.2s;
+  margin-left: 12px;
+  /* outline: 1px solid blue; */
+}
+.meet:hover{
+  /* scale: 1.1; */
+  transform: translateY(-20px);
+  cursor: pointer;
+}
+.haribo_produce h3{
+  color: #d9262d;
+  font-family: 'Cafe24Ssurround';
+  font-size: 32px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.haribo_produce p{
+  color: #555;
+  font-size: 20px;
+  /* font-weight: bold; */
+}
+/* .meetHaribo{
+  outline: 1px solid violet;
+} */
+.meetHaribo > .txt{
+  width: 490px;
+  /* outline: 1px solid blue; */
+}
+.meetHaribo > .txt > .more{
+  height: 30px;
+  display: flex;
+  margin-left: 10px;
+  margin-top: 65px;
+  /* outline: 1px solid green; */
+}
+.meetHaribo > .txt > .more img{
+  width: 30px;
+  height: 25px;
+  margin-right: 20px;
+  /* outline: 1px solid red; */
+  margin-top: 2px;
+  animation: arrow 2s linear infinite;
+}
+@keyframes arrow{
+  0%{transform: translateX(10px);}
+  50%{transform: translateX(-10px);}
+  100%{transform: translateX(10px);}
+}
+.meetHaribo > .txt > .more p{
+  width: 46px;
+  height: 20px;
+  font-size: 16px;
+  /* outline: 1px solid red; */
+  margin-top: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.meetHaribo > .txt > .more p:after {/*after 가상요소*/
+  display:block;/*a요소를 블록 요소라고 선언*/
+  width: 46px;
+  /*카테고리 메뉴 밑줄의 크기를 동일하게 주기 위해 width 설정*/
+  /*혹시 a요소 크기만큼 생기길 바란다면 width 삭제*/
+  content: ''; /*comtent안은 밑줄 디자인을 위해 비워두세요.*/
+  border-bottom: solid 2px #d9262d;
+  padding-bottom: 2px;
+  transform: scaleX(0); /*크기를 0으로 줌으로써 평상시엔 밑줄 없음*/
+  transition: transform 0.3s ease-in-out; /*변형 방식*/
+}
+.meetHaribo > .txt > .more p:hover:after {
+  transform: scaleX(1); /*a 속성에 hover시 after를 기존 크기로 변경*/
+}
+/*왼쪽 끝*/
+
+/* .produce{
+  outline: 1px solid violet;
+} */
+.pro{
+  transition: all 0.2s;
+  height: 470px;
+  margin-left: 95px;
+  /* outline: 1px solid blue; */
+}
+.pro:hover{
+  /* scale: 1.1; */
+  transform: translateY(-20px);
+  cursor: pointer;
+}
+.produce > .txt > .more{
+  height: 30px;
+  display: flex;
+  margin-left: 10px;
+  margin-top: 30px;
+  /* outline: 1px solid green; */
+}
+.produce > .txt > .more img{
+  width: 30px;
+  height: 25px;
+  margin-right: 20px;
+  /* outline: 1px solid red; */
+  margin-top: 2px;
+  animation: arrow 2s linear infinite;
+}
+@keyframes arrow{
+  0%{transform: translateX(10px);}
+  50%{transform: translateX(-10px);}
+  100%{transform: translateX(10px);}
+}
+.produce p{
+  line-height: 30px;
+}
+.produce > .txt > .more p{
+  width: 46px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  /* outline: 1px solid red; */
+  /* margin-top: 5px; */
+  cursor: pointer;
+}
+.produce > .txt > .more p:after {/*after 가상요소*/
+  display:block;/*a요소를 블록 요소라고 선언*/
+  width: 46px;
+  /*카테고리 메뉴 밑줄의 크기를 동일하게 주기 위해 width 설정*/
+  /*혹시 a요소 크기만큼 생기길 바란다면 width 삭제*/
+  content: ''; /*comtent안은 밑줄 디자인을 위해 비워두세요.*/
+  border-bottom: solid 2px #d9262d;
+  transform: scaleX(0); /*크기를 0으로 줌으로써 평상시엔 밑줄 없음*/
+  transition: transform 0.3s ease-in-out; /*변형 방식*/
+}
+.produce > .txt > .more p:hover:after {
+  transform: scaleX(1); /*a 속성에 hover시 after를 기존 크기로 변경*/
+}
+
+/*===================================== outputNumer ======================================*/
+.outputNumber{
+  width: 1200px;
+  position: relative;
+}
+.outputNumber > .numerBox > .mainjelly img{
+  width: 10px;
+  margin: auto;
+}
+.numerBox > .numberHover{
+  width: 1200px;
+  height: 800px;
+  background-color: rgba(123,193,37,0.8);
+  position: absolute;
+  top: 1986px;
+  z-index: 9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

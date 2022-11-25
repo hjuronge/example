@@ -3,17 +3,20 @@
 <head>
 <meta charset="utf-8">
 <title>하리보 메인 포트폴리오</title>
+<!--ios전용 뷰포트-->
+<meta name="viewport" content="width=device-width, ininitial-scale=1.0">
+
 <!--폰트어썸 CDN-->
 <script src="https://kit.fontawesome.com/632d3e2496.js" crossorigin="anonymous"></script>
 
 <!--외부정의 css-->
 <link href="css/home.css" rel="stylesheet">
 
-<!--jQuery 라이브러리-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
 <!--외부정의 js-->
 <script src="js/custom.js"></script>
+
+<!--jQuery 라이브러리-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
 <!--jquery UI-->
 <script src="js/jquery-ui.min.js"></script>
@@ -22,8 +25,8 @@
 <link href="css/lightbox.min.css" rel="stylesheet">
 <!--라이트박스 플러그인-->
 <script src="js/lightbox.min.js"></script>
-
 </head>
+
 <body>
   <div class="header">
   </div><!--header END-->
@@ -68,14 +71,14 @@
             <p>모든 골드베런에는 작은 부분까지 사랑이 담겨 있습니다.<br>
               어떻게요? 생산 과정에서 볼 수 있습니다.</p>
             <div class="more">
-              <img src="img/arrow1.png" alt="" width="30">
+              <img src="img/arrow1.png" alt="">
               <p>더보기</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="outputNumer">
+      <div class="outputNumber">
         <div class="numerBox">
           <img class="mainjelly" src="img/mainJelly1.png" alt="">
           <div class="numberHover">
@@ -86,21 +89,21 @@
                 오리지널 레시피와 엄격한 관리를 고수하고 있습니다.<br>
                 품절이 우선이기 때문이죠!</p>
               <div class="more">
-                <img src="img/arrow2.png" alt="" width="50">
+                <img src="img/arrow2.png" alt="">
                 <p>자세히 보기</p>
               </div>
             </div>
-            <img class="wink" src="img/winkbear.png" alt="" width="310">
+            <img class="wink" src="img/winkbear.png" alt="">
           </div>
         </div>
       </div>
 
       <div class="questions">
         <div class="transparency"></div>
-        <img src="img/mainJelly2.png" alt="">
+        <img class="mainJelly" src="img/mainJelly2.png" alt="">
         <div class="questionsBox">
-          <img src="img/question.png" alt="" width="210">
-          <div class="questionsTxt">
+          <img class="questImg" src="img/question.png" alt="">
+          <div class="questTxt">
             <h3>자주 묻는 질문</h3>
             <p>이곳에서 다양한 질문들과 답변을 찾으실 수 있어요!</p>
             <h4>소비자 서비스 팀</h4>
@@ -108,40 +111,45 @@
               <p>+82 2-578-8385</p>
             </div>
             <div class="more">
-              <img src="img/arrow3.png" alt="" width="35">
+              <img src="img/arrow3.png" alt="">
               <p>상담하기</p>
             </div>
           </div>
         </div>
-        <img class="mic" src="img/micbear.png" alt="" width="380">
+        <img class="mic" src="img/micbear.png" alt="">
       </div>
 
       <div class="product">
-        <video autoplay loop muted>
-          <source src="img/product.mp4" type="video/mp4" width="280">
-        </video>
-        <div class="flipCard">
-          <div class="front">
-            <img src="img/front1.jpg" alt="" width="280">
-          </div>
-          <div class="back">
-            <img src="img/back1.png" alt="" width="280">
-          </div>
-        </div>
-        <div class="flipCard">
-          <div class="front">
-            <img src="img/front2.jpg" alt="" width="280">
-          </div>
-          <div class="back">
-            <img src="img/back2.png" alt="" width="280">
-          </div>
-        </div>
-        <div class="flipCard">
-          <div class="front">
-            <img src="img/front3.png" alt="" width="280">
-          </div>
-          <div class="back">
-            <img src="img/back3.png" alt="" width="280">
+        <h3>하리보 제품</h3>
+        <div class="flipBox">
+          <video autoplay muted>
+            <source src="img/product.mp4" type="video/mp4">
+          </video>
+          <div class="productImg">
+            <div class="flipCard">
+              <div class="front">
+                <img src="img/front1.jpg" alt="" width="280">
+              </div>
+              <div class="back">
+                <img src="img/back1.png" alt="" width="280">
+              </div>
+            </div>
+            <div class="flipCard">
+              <div class="front">
+                <img src="img/front2.jpg" alt="" width="280">
+              </div>
+              <div class="back">
+                <img src="img/back2.png" alt="" width="280">
+              </div>
+            </div>
+            <div class="flipCard">
+              <div class="front">
+                <img src="img/front3.png" alt="" width="280">
+              </div>
+              <div class="back">
+                <img src="img/back3.png" alt="" width="280">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -151,34 +159,36 @@
         <div class="all">
           <div class="blue">
             <div class="footerBox">
-              <div class="1">
+              <div class="box1">
                 <p>FAQ</p>
                 <p>Contact Us</p>
                 <p>Corporate Responsibility</p>
                 <p>Whistle-blower System</p>
-                <p>ⓒ 2022 HARIBO GmbH & Co. KG</p>
+                <p>© 2022 HARIBO GmbH & Co. KG</p>
               </div>
-              <div class="2">
+              <div class="box2">
                 <p>Legal Notice</p>
                 <p>개인정보처리방침</p>
                 <p>이용약관</p>
                 <p>윤리강령</p>
               </div>
               <div class="snsBox">
-                <select class="language" name="language" style="width: 180px;">
-                  <option value="korea">대한민국 (한국)</option>
-                  <option value="korea">Canada (English)</option>
-                  <option value="korea">日本 (日本語)</option>france
-                  <option value="korea">France (Français)</option>
+                <select class="language" name="language">
+                  <option value="korea">대한민국 (한국)🎎</option>
+                  <option value="canada">Canada (English)🍁</option>
+                  <option value="japan">日本 (日本語)🎌</option>france
+                  <option value="france">France (Français)🗼</option>
                 </select>
                 <div class="sns">
                   <div class="blueBear">
                     <img src="img/bluebear.png" alt="" width="70">
-                    <img src="img/facebook.png" alt="" width="30">
+                    <i class="fab fa-facebook"></i>
+                    <!-- <img src="img/facebook.png" alt="" width="30"> -->
                   </div>
                   <div class="blueBear">
                     <img src="img/bluebear.png" alt="" width="70">
-                    <img src="img/instagram.png" alt="" width="30">
+                    <i class="fab fa-instagram"></i>
+                    <!-- <img src="img/instagram.png" alt="" width="30"> -->
                   </div>
                 </div>
               </div>
@@ -187,12 +197,14 @@
           </div>
           <div class="whiteLine"></div>
           <div class="jellyLine">
-            <div class="txt">
-              <p>Kids and grown-ups love it so, the happy world of Haribo!</p>
-              <p class="hide">어른 아이 할 것 없이 모두 좋아하는 하리보의 행복한 세상!</p>
+            <div class="b">
+              <div class="txt">
+                <p>Kids and grown-ups love it so, the happy world of Haribo!</p>
+                <p class="hide">어른 아이 할 것 없이 모두 좋아하는 하리보의 행복한 세상!</p>
+              </div>
             </div>
-            <img class="mic" src="img/footer.png" alt="">
             <div class="jelly_transparency"></div>
+            <img src="img/footer.png" alt="">
           </div>
         </div>
       </footer>

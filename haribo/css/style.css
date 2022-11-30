@@ -1,0 +1,1335 @@
+@font-face{
+  font-family: 'NanumSquareNeo';
+  src: url(../font/NanumSquareNeo-bRg.ttf) format('truetype');
+}
+@font-face{
+  font-family: 'Cafe24Ssurround';
+  src: url(../font/Cafe24Ssurround.ttf) format('truetype');
+}
+
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: 0; color: inherit;}
+body{
+  font-family: 'NanumSquareNeo';
+  color: #111;
+  font-size: 16px;
+}
+
+
+/*===================================== menu ======================================*/
+.menu{
+  width: 100%;
+  height: 970px;
+  background-color: #005cb9;
+}
+.navBox{ /* 도움 ->  */
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  font-size: 35px;
+  color: #fff;
+  line-height: 70px;
+  font-family: 'Cafe24Ssurround';
+}
+.nav{ 
+  width: 100%;
+  padding: 220px 0px;
+  /* outline: 1px solid red; */
+}
+
+.navx > .navclose{
+  position: relative;
+  bottom: 150px;
+  transition: all 0.3s;
+}
+.navx > .navclose:hover img{
+  scale: 1.1;
+  cursor: pointer;
+}
+.navclose img{
+  width: 6%;
+  position: absolute;
+}
+.navclose > .close{
+  width: 2%;
+  position: absolute;
+  left: 24px;
+  top: 25px;
+}
+
+.navpop{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.navpop > .info{
+  width: 100%;
+}
+.menutxt p:hover{
+  color: #ffeb06;
+  cursor: pointer;
+}
+/* .menutxt{
+} */
+.photo{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+}
+.photo > .whiteLine{
+  /* width: 30%; */
+  width: 28%;
+  position: absolute;
+  right: 0;
+  /* right: -12px; top: -19px; */
+  transition: all 0.3s;
+}
+.photo:hover > .whiteLine{
+  scale: 1.1;
+}
+.photo > .a1,
+.photo > .a2,
+.photo > .a3,
+.photo > .a4,
+.photo > .a5,
+.photo > .a6,
+.photo > .a7,
+.photo > .a8{
+  width: 28%;
+  position: absolute;
+  right: 0;
+}
+
+
+/*================================== header & contain ===================================*/
+.header{
+  width: 200px;
+  height: 50px;
+  background-color: #fff;
+  border: 2px solid #d9262d;
+  border-radius: 30px;
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  top: 50px;
+  right: 100px;
+}
+.header > .menuclick{
+  width: 180px;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  /* justify-content: center; */
+  font-size: 28px;
+  color: #d9262d;
+  font-family: 'Cafe24Ssurround';
+}
+.menuclick:hover{
+  color: #005cb9;
+  cursor: pointer;
+}
+.header .search{
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+}
+.searchBear{
+  width: 50px;
+  height: 80px;
+  position: absolute;
+  right: -10px; top: -18px;
+}
+
+.contain{
+  position:relative;
+}
+.contain > video{
+  width: 100%;
+  height: 970px;
+  object-fit: cover;
+  display: block;
+}
+
+/*adver 광고 (맨 위)*/
+.adver{
+  width:100%;
+  height:100%;
+  top:0; left:0;
+  position: absolute;
+  color: #fff;
+}
+.adver > .thum{
+  width: 100%;
+  height: 970px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.adver > .logo img{
+  width: 15%; /*300px*/
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  z-index: 9;
+}
+.adver > .title{
+  position: absolute;
+  z-index: 10;
+  top: 210px; /*130이 로고 아래 - 80*/
+  left: 100px;
+}
+.adver h1{
+  font-size: 80px;
+  color: #d9262d;
+  -webkit-text-stroke: 1.5px #fff;
+  font-family: 'Cafe24Ssurround';
+  margin-bottom: 50px;
+}
+.adver p{
+  font-size: 35px;
+}
+.adver > .title > .more{
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+.adver > .title > .more p{
+  font-size: 22px;
+  margin-left: 20px;
+  margin-top: 5px;
+  color: #ffeb06;
+  cursor: pointer;
+}
+
+.adver > .title > .more p:after {/*after 가상요소*/
+  display:block;/*a요소를 블록 요소라고 선언*/
+  content: ''; /*comtent안은 밑줄 디자인을 위해 비워두세요.*/
+  border-bottom: solid 3px #ffeb06;
+  padding-bottom: 2px;
+  transform: scaleX(0); /*크기를 0으로 줌으로써 평상시엔 밑줄 없음*/
+  transition: transform 0.3s ease-in-out; /*변형 방식*/
+}
+.adver > .title > .more p:hover:after {
+  transform: scaleX(1); /*a 속성에 hover시 after를 기존 크기로 변경*/
+}
+.adver > .title > .more img{
+  width: 6.3291%; /*50px;*/
+  animation: arrow 2s linear infinite;
+}
+@keyframes arrow{
+  0%{transform: translateX(10px);}
+  50%{transform: translateX(-10px);}
+  100%{transform: translateX(10px);}
+}
+.adver > .title > .more img:hover{
+  transform: translateX(-50px);
+}
+
+
+/*===================================== haribo_produce ======================================*/
+.haribo_produce{
+  padding: 120px 0px;
+  /* height: 610px; 610+120 = 730*/
+  max-width: 1200px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* outline: 1px solid seagreen; */
+  /* margin: auto; */
+  /* top: 970px; */
+}
+.haribo_produce > .produce_percent{
+  width: 100%;
+  display: flex;
+  margin-left: 50px;
+}
+.meetHaribo{
+  width: 45%;
+  /* outline: 1px solid blue; */
+  margin-left: -30px;
+}
+.meet{
+  width: 84.5454%; /*465px / 550*/
+  transition: all 0.2s;
+  margin-left: 12px;
+  /* outline: 1px solid blue; */
+  /* z-index: 999; */
+}
+/* .meetHaribo > .meet:hover{
+  transform: translateY(-20px);
+  cursor: pointer;
+} */
+.meetHaribo img:hover{
+  transform: translateY(-20px);
+  cursor: pointer;
+}
+.haribo_produce h3{
+  color: #d9262d;
+  font-family: 'Cafe24Ssurround';
+  font-size: 28px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.haribo_produce h5{
+  line-height: 30px;
+  color: #555;
+  font-size: 16px;
+  /* letter-spacing: 3px; */
+  font-weight: normal;
+}
+.meetHaribo > .txt{
+  margin-top: 77px;
+  margin-left: 15px;
+  width: 89.0909%; /*490px*/
+  /* outline: 1px solid green; */
+}
+.meetHaribo > .txt > .more{
+  display: flex;
+  margin-left: 10px;
+  margin-top: 28px;
+  /* outline: 1px solid violet; */
+}
+.meetHaribo > .txt > .more img{
+  width: 5.4545%; /*30px*/
+  height: 70%;
+  margin-right: 20px;
+  /* outline: 1px solid red; */
+  margin-top: 2px;
+  animation: arrow 2s linear infinite;
+}
+@keyframes arrow{
+  0%{transform: translateX(10px);}
+  50%{transform: translateX(-10px);}
+  100%{transform: translateX(10px);}
+}
+
+.meetHaribo > .txt > .more p{
+  font-size: 14px;
+  margin-top: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  /* outline: 1px solid green; */
+}
+.meetHaribo > .txt > .more p:after {/*after 가상요소*/
+  display:block;/*a요소를 블록 요소라고 선언*/
+  content: ''; /*comtent안은 밑줄 디자인을 위해 비워두세요.*/
+  border-bottom: solid 3px #d9262d;
+  padding-bottom: 2px;
+  transform: scaleX(0); /*크기를 0으로 줌으로써 평상시엔 밑줄 없음*/
+  transition: transform 0.3s ease-in-out; /*변형 방식*/
+}
+.meetHaribo > .txt > .more p:hover:after {
+  transform: scaleX(1); /*a 속성에 hover시 after를 기존 크기로 변경*/
+}
+/*왼쪽 끝*/
+
+.produce{
+  width: 55%;
+  /* outline: 1px solid blue; */
+  margin-left: 50px;
+}
+.pro{
+  width: 71.5384%; /*465px / 650*/
+  transition: all 0.2s;
+  margin-left: 95px;
+  /* outline: 1px solid blue; */
+}
+.pro:hover{
+  /* scale: 1.1; */
+  transform: translateY(-20px);
+  cursor: pointer;
+}
+.produce > .txt{
+  margin-left: 90px;
+  width: 75.3846%; /*490px*/
+  /* outline: 1px solid green; */
+}
+.produce > .txt > .more{
+  /* height: 30px; */
+  display: flex;
+  margin-left: 10px;
+  margin-top: 30px;
+  /* outline: 1px solid green; */
+}
+.produce > .txt > .more img{
+  /* width: 4.6153%; */
+  width: 5.4545%; /*30px*/
+  height: 70%;
+  margin-right: 20px;
+  /* outline: 1px solid red; */
+  margin-top: 2px;
+  animation: arrow 2s linear infinite;
+}
+@keyframes arrow{
+  0%{transform: translateX(10px);}
+  50%{transform: translateX(-10px);}
+  100%{transform: translateX(10px);}
+}
+
+.produce > .txt > .more p{
+  font-size: 16px;
+  font-weight: bold;
+  /* outline: 1px solid green; */
+  margin-top: 5px;
+  cursor: pointer;
+}
+.produce > .txt > .more p:after {/*after 가상요소*/
+  display:block;/*a요소를 블록 요소라고 선언*/
+  content: ''; /*comtent안은 밑줄 디자인을 위해 비워두세요.*/
+  border-bottom: solid 3px #d9262d;
+  padding-bottom: 2px;
+  transform: scaleX(0); /*크기를 0으로 줌으로써 평상시엔 밑줄 없음*/
+  transition: transform 0.3s ease-in-out; /*변형 방식*/
+}
+.produce > .txt > .more p:hover:after {
+  transform: scaleX(1); /*a 속성에 hover시 after를 기존 크기로 변경*/
+}
+
+
+/*===================================== outputNumber ======================================*/
+.outputNumber{
+  max-width: 1200px;
+  height: 900px;
+  margin: auto;
+  margin-top: 860px; /*740+120*/
+  position: relative;
+  /* position: absolute;
+  top: 1920px; /*970 + 730 = 1,700 -> 1920*/
+  /* left: 50%;
+  transform: translateX(-50%);  */
+  /* outline: 1px solid red; */
+}
+.outputNumber > .numerBox > .mainjelly{
+  width: 100%;
+  height: 900px;
+  /* outline: 1px solid blue; */
+}
+.numerBox:hover > .numberHover{
+  opacity: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.numerBox > .numberHover{
+  width: 100%;
+  height: 900px;
+  background-color: rgba(123,193,37,0.8);
+  position: absolute;
+  top: 0;
+  /* opacity: 0; */
+}
+.output{
+  /* outline: 1px solid yellow; */
+  width: 65.8333%; /*790px;*/
+  margin: auto;
+  margin-top: 150px;
+}
+.output h2{
+  font-size: 115px;
+  color: #ffeb06;
+  font-family: 'Cafe24Ssurround';
+  /* -webkit-text-stroke: 1.5px #fff; */
+  /* text-shadow: 2px 2px 10px greenyellow; */
+}
+.output p{
+  font-size: 35px;
+  color: #fff;
+  line-height: 60px;
+  margin-top: 60px;
+}
+
+.output > .more img{
+  width: 6.3291%; /*50px;*/
+  margin-right: 30px;
+  animation: arrow 2s linear infinite;
+}
+@keyframes arrow{
+  0%{transform: translateX(10px);}
+  50%{transform: translateX(-10px);}
+  100%{transform: translateX(10px);}
+}
+.output > .more{
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  margin-left: 10px;
+  /* outline: 1px solid green; */
+}
+.output > .more p{
+  /* width: 140px;
+  height: 50px; */
+  font-size: 28px;
+  color: #ffeb06;
+  margin-top: 0;
+  cursor: pointer;
+  /* outline: 1px solid red; */
+}
+.output > .more p:after {/*after 가상요소*/
+  display:block;/*a요소를 블록 요소라고 선언*/
+  /*카테고리 메뉴 밑줄의 크기를 동일하게 주기 위해 width 설정*/
+  /*혹시 a요소 크기만큼 생기길 바란다면 width 삭제*/
+  content: ''; /*comtent안은 밑줄 디자인을 위해 비워두세요.*/
+  border-bottom: solid 3px #ffeb06;
+  transform: scaleX(0); /*크기를 0으로 줌으로써 평상시엔 밑줄 없음*/
+  transition: transform 0.3s ease-in-out; /*변형 방식*/
+}
+.output > .more p:hover:after {
+  transform: scaleX(1); /*a 속성에 hover시 after를 기존 크기로 변경*/
+}
+.numberHover > .wink{
+  /* width: 310px; */
+  width: 28%;
+  position: absolute;
+  bottom: 0; right: 40px;
+}
+
+
+/*===================================== questions ======================================*/
+.questions{
+  max-width: 1200px;
+  height: 600px;
+  position: relative;
+  margin: auto;
+  margin-top: 0px;
+}
+.questions > .transparency{
+  width: 100%;
+  height: 600px;
+  background-color: rgba(255,255,255,0.4);
+  position: absolute;
+}
+.questions > .mainJelly{
+  width: 100%;
+  height: 600px;
+}
+.questions > .questionsBox{
+  width: 64.75%; /*777px*/
+  height: 450px;
+  /* height: 70%; */
+  background-color: #fff;
+  border: 7px solid rgba(123,193,37,0.7);
+  border-radius: 100px;
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+}
+.questionsBox > .questImg{
+  width: 27%; /*210px*/
+  margin-left: 40px;
+  margin-top: 10px;
+  /* outline: 1px solid red; */
+}
+.questionsBox > .questTxt{
+  margin-left: 50px; /*80이 오른쪽에 붙음*/
+  margin-top: 10px;
+  /* outline: 1px solid red; */
+}
+.questTxt h3{
+  font-size: 50px;
+  color: #d9262d;
+  font-family: 'Cafe24Ssurround';
+}
+.questTxt h4{
+  margin-top: 50px;
+  font-size: 30px;
+  color: #7bc125;
+  font-family: 'Cafe24Ssurround';
+}
+.questTxt p:nth-child(2){
+  margin-top: 30px;
+  font-size: 20px;
+}
+.questTxt > .phoneNumber{
+  margin-top: 20px;
+  width: 40%; /*170px*/
+  height: 30px;
+  border-radius: 20px;
+  color: #fff;
+  background-color: #7bc125;
+}
+.questTxt > .phoneNumber p{
+  font-size: 17px;
+  padding: 6px 11px;
+  box-sizing: border-box;
+}
+.questTxt > .phoneNumber p:hover{
+  color: #ffeb06;
+  cursor: pointer;
+}
+.questTxt > .more{
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+.questTxt > .more img{
+  width: 7.7777%; /*35px*/
+  margin-right: 30px;
+  animation: arrow 2s linear infinite;
+  /* outline: 1px solid red; */
+}
+@keyframes arrow{
+  0%{transform: translateX(10px);}
+  50%{transform: translateX(-10px);}
+  100%{transform: translateX(10px);}
+}
+.questTxt > .more p{
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+  margin-top: 0;
+  cursor: pointer;
+}
+.questTxt > .more p:after {/*after 가상요소*/
+  display:block;/*a요소를 블록 요소라고 선언*/
+  /*카테고리 메뉴 밑줄의 크기를 동일하게 주기 위해 width 설정*/
+  /*혹시 a요소 크기만큼 생기길 바란다면 width 삭제*/
+  content: ''; /*comtent안은 밑줄 디자인을 위해 비워두세요.*/
+  border-bottom: solid 3px #7bc125;
+  padding-bottom: 4px;
+  transform: scaleX(0); /*크기를 0으로 줌으로써 평상시엔 밑줄 없음*/
+  transition: transform 0.3s ease-in-out; /*변형 방식*/
+}
+.questTxt > .more p:hover:after {
+  transform: scaleX(1); /*a 속성에 hover시 after를 기존 크기로 변경*/
+}
+.questions > .mic{
+  width: 31.6666%; /*380px*/
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+
+
+/*===================================== product ======================================*/
+.product{
+  padding: 120px 0px;
+  max-width: 1200px;
+  margin: auto;
+  /* outline: 1px solid blue; */
+}
+.product h3{
+  font-size: 50px;
+  color: #d9262d;
+  font-family: 'Cafe24Ssurround';
+}
+.product > .flipBox{
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* outline: 1px solid red; */
+}
+.flipBox > video{
+  width: 23.333%; /*280px*/
+  border-radius: 40px;
+}
+.productImg{
+  width: 74.5%; /*894px -26*/
+  display: flex;
+  justify-content: space-between;
+}
+
+/**/
+.flipCard1,
+.flipCard2,
+.flipCard3{
+  width: 31.3199%;
+  position: relative;
+  transition: transform 1.2s; /*transform속성에 변환효과 적용*/
+  transform-style: preserve-3d;
+  /*transform-style속성은 요소의 자식요소가 입체적인
+  3d공간에 배치될시, 요소의 표면에 평평하게 묘사할지를 결정합니다.
+  기본값은 flat로 자식요소가 2d의 2차원에서 부모요소와 동일한 평면에 배치되고
+  preserve-3d를 지정하면 3d공간에 배치됩니다.*/
+  perspective: 1000px; /*깊이감 설정(z축으로 1000px만큼의 깊이를 설정)*/
+}
+.flipCard1 > .front1{
+  background: url(../img/front1.jpg) center/cover;
+}
+.flipCard2 > .front2{
+  background: url(../img/front2.jpg) center/cover;
+}
+.flipCard3 > .front3{
+  background: url(../img/front3.png) center/cover;
+}
+.flipCard1 > .back1{
+  background: url(../img/back1.png) center/cover;
+  backface-visibility: hidden; /*요소의 뒷면을 가려주는 속성*/
+}
+.flipCard2 > .back2{
+  background: url(../img/back2.png) center/cover;
+  backface-visibility: hidden; /*요소의 뒷면을 가려주는 속성*/
+}
+.flipCard3 > .back3{
+  background: url(../img/back3.png) center/cover;
+  backface-visibility: hidden; /*요소의 뒷면을 가려주는 속성*/
+}
+.flipCard1 > .front1,
+.flipCard1 > .back1,
+.flipCard2 > .front2,
+.flipCard2 > .back2,
+.flipCard3 > .front3,
+.flipCard3 > .back3{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.productImg > .flipCard1:hover,
+.productImg > .flipCard2:hover,
+.productImg > .flipCard3:hover{
+  transform: rotateY(180deg);
+}
+.flipCard1 > .back1,
+.flipCard2 > .back2,
+.flipCard3 > .back3{
+  transform: rotateY(180deg); /*뒷면을 y축으로 180도 회전하여 화면에 가려놓음*/
+}
+
+
+/*===================================== footer ======================================*/
+footer{
+  width: 100%;
+  top: 4500px;
+  /* position: relative; */
+}
+/* footer > .all{
+  position: relative;
+} */
+footer > .all > .blue{
+  width: 100%;
+  height: 400px;
+  background-color: #005cb9;
+  font-size: 20px;
+  font-family: 'Cafe24Ssurround';
+  color: #fff;
+  position: relative;
+}
+.all > .blue > .footerBox{
+  max-width: 1200px;
+  margin: auto;
+  padding: 94px 0px;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+.footerBox > .footerTxt{
+  width: 100%;
+}
+.footerBox > .footerTxt > .footer_percent{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_percent > .box1 p{
+  margin-top: 16px;
+}
+.footer_percent > .box1 p:nth-child(5){
+  font-size: 16px;
+  margin-top: 40px;
+  font-family: 'NanumSquareNeo';
+}
+.footer_percent > .box2 p:nth-child(1){
+  font-family: 'Cafe24Ssurround';
+}
+.footer_percent > .box2 p{
+  margin-top: 16px;
+  font-family: 'NanumSquareNeo';
+}
+.footer_percent > .snsBox > .language{
+  width: 100%; /*180px*/
+  height: 40px;
+  border-radius: 20px;
+  background-color: #3d8bcd;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+}
+.footer_percent > .snsBox > .language:hover{
+  border: 2px solid #ffeb06;
+}
+.footer_percent > .snsBox > .sns{
+  margin-top: 55px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  position: relative;
+}
+.sns > .blueBear{
+  transition: all 0.8s;
+  cursor: pointer;
+}
+.sns > .blueBear img{
+  width: 100%; /*70px*/
+}
+.sns > .blueBear:hover img,
+.sns > .blueBear:hover i{
+  color: #ffeb06;
+  scale: 1.1;
+}
+.sns > .blueBear:nth-child(1) i{
+  position: absolute;
+  left: 20px;
+  top: 22px;
+}
+.sns > .blueBear:nth-child(2) i{
+  position: absolute;
+  right: 22px;
+  top: 22px;
+}
+.all > .whiteLine{
+  width: 100%;
+  height: 10px;
+  background-color: #fff;
+}
+
+.all > .jellyLine{
+  width: 100%;
+  font-size: 25px;
+  font-family: 'Cafe24Ssurround';
+  text-align: center; /*안되네*/
+  /* outline: 1px solid blueviolet; */
+}
+.all > .jellyLine img{
+  width: 100%;
+  height: 50px;
+  display: block;
+}
+.all > .jellyLine p{
+  position: absolute;
+  z-index: 5;
+  color: #fff;
+  margin-top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.jellyLine > .txt .hide{
+  display: none;
+}
+.jellyLine > .txt:hover > .hide{
+  display: block;
+  cursor: pointer;
+}
+.jellyLine > .txt:hover > .show{
+  display: none;
+}
+.jellyLine > .jelly_transparency{
+  width: 100%;
+  height: 50px;
+  background-color: rgba(217,38,45,0.8);
+  position: absolute;
+}
+.all > .blue > .stand{
+  width: 8.3%; /*164px*/
+  position: absolute;
+  z-index: 99;
+  bottom: -14px; right: 300px;
+}
+
+
+/* 반응형 -> media 시작 !!! */ /*======================================*/
+
+
+/*브라우저의 넓이가 1200px이하 일 때*/
+@media screen and (max-width: 1200px){
+  /*adver*/
+  .adver > .logo img{
+    width: 30%; /*300px*/
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 9;
+  }
+  .adver > .title{
+    position: absolute;
+    top: 240px; /*140이 로고 아래*/
+    left: 50px;
+  }
+  .adver h1{
+    font-size: 70px;
+    color: #d9262d;
+    -webkit-text-stroke: 1.5px #fff;
+    font-family: 'Cafe24Ssurround';
+    margin-bottom: 50px;
+  }
+  .adver p{
+    font-size: 28px;
+  }
+  .adver > .title > .more{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 10px;
+  }
+  .adver > .title > .more p{
+    font-size: 18px;
+    margin-left: 20px;
+    margin-top: 5px;
+    color: #ffeb06;
+    cursor: pointer;
+  }
+
+  /*footer*/
+  .footerBox > .footerTxt > .footer_percent{
+    margin-left: 60px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .all > .blue > .stand{
+    width: 14%;
+    position: absolute;
+    z-index: 99;
+    bottom: -14px; right: 50px;
+  }
+  .all > .jellyLine{
+    font-size: 19px;
+  }
+}
+
+
+/*브라우저의 넓이가 980px이하 일 때*/
+@media screen and (max-width: 980px){
+  /*adver*/
+  .adver > .logo img{
+    width: 30%; /*300px*/
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 9;
+  }
+  .adver > .title{
+    position: absolute;
+    top: 190px; /*140이 로고 아래*/
+    left: 50px;
+  }
+  .adver h1{
+    font-size: 60px;
+    color: #d9262d;
+    -webkit-text-stroke: 1.5px #fff;
+    font-family: 'Cafe24Ssurround';
+    margin-bottom: 40px;
+  }
+  .adver p{
+    font-size: 24px;
+  }
+
+  /*haribo_produce*/
+   /* .haribo_produce{
+    outline: 1px solid green;
+  } */
+  .haribo_produce > .produce_percent{
+    margin-left: 25px;
+  }
+  .haribo_produce h3{
+    font-size: 30px;
+  }
+  /* .meet{
+    outline: 1px solid blue;
+  } */
+  .meetHaribo > .txt{
+    margin-left: 16px;
+    /* outline: 1px solid green; */
+  }
+  /* .pro{
+    margin-left: 95px;
+    outline: 1px solid blue;
+  } */
+  .produce > .txt{
+    margin-left: 90px;
+    /* outline: 1px solid green; */
+  }
+
+  /*output*/
+  .output{
+    /* outline: 1px solid yellow; */
+    margin-top: 190px;
+  }
+  .output h2{
+    font-size: 96px;
+  }
+  .output p{
+    font-size: 28px;
+    line-height: 45px;
+    margin-top: 50px;
+  }
+  .output > .more{
+    margin-top: 50px;
+  }
+
+  /*questions*/
+  .questions > .questionsBox{
+    right: 30px;
+    height: 420px;
+  }
+  .questionsBox > .questImg{
+    margin-left: 26px;
+    /* outline: 1px solid red; */
+  }
+  .questionsBox > .questTxt{
+    margin-left: 38px; /*80이 오른쪽에 붙음*/
+    /* outline: 1px solid red; */
+  }
+  .questTxt h3{
+    font-size: 40px;
+  }
+  .questTxt h4{
+    margin-top: 40px;
+  }
+  .questTxt p:nth-child(2){
+    /* margin-top: 30px; */
+    font-size: 17px;
+  }
+  .questTxt > .phoneNumber p{
+    font-size: 14px;
+    padding: 8px 11px;
+  }
+  .questTxt > .more{
+    margin-top: 40px;
+  }
+  .questTxt > .more p{
+    font-size: 17px;
+    font-weight: bold;
+    color: #555;
+    margin-top: 0;
+    cursor: pointer;
+  }
+
+  /*footer*/
+  .all > .blue > .stand{
+    bottom: -8px; right: 45px;
+  }
+  .all > .jellyLine p{
+    font-size: 16px;
+    margin-top: 16px;
+  }
+}
+
+
+/*브라우저의 넓이가 768px이하 일 때*/
+@media screen and (max-width: 768px){
+  /*adver*/
+  .adver > .title{
+    position: absolute;
+    top: 150px; /*110이 로고 아래 - 40*/
+    left: 50px;
+  }
+  .adver h1{
+    font-size: 45px;
+    margin-bottom: 20px; /*30*/
+  }
+  .adver p{
+    font-size: 20px;
+  }
+  .adver > .title > .more{
+    margin-top: 30px;
+  }
+  .adver > .title > .more p{
+    font-size: 16px;
+    margin-top: 5px;
+  }
+ 
+  /*haribo_produce*/
+   /* .haribo_produce{
+    outline: 1px solid green;
+  } */
+  .haribo_produce > .produce_percent{
+    margin-left: 8px;
+  }
+  .haribo_produce h3{
+    font-size: 30px;
+    letter-spacing: 8px;
+  }
+  /* .meet{
+    outline: 1px solid blue;
+  } */
+  .meetHaribo > .txt{
+    margin-left: 24px;
+    /* outline: 1px solid green; */
+  }
+  /* .pro{
+    margin-left: 95px;
+    outline: 1px solid blue;
+  } */
+  .produce > .txt{
+    margin-left: 95px;
+    /* outline: 1px solid green; */
+  }
+
+  /*output*/
+  .output{
+    /* outline: 1px solid yellow; */
+    margin-top: 270px;
+  }
+  .output h2{
+    font-size: 76px;
+  }
+  .output p{
+    font-size: 22px;
+    line-height: 40px;
+    margin-top: 30px;
+  }
+  .output > .more{
+    margin-top: 40px;
+  }
+
+  /*questions*/
+  .questions > .questionsBox{
+    width: 63%; /*777px*/
+    height: 370px;
+    top: 120px;
+    right: 30px;
+  }
+  .questionsBox > .questImg{
+    width: 27%; /*210px*/
+    margin-left: 25px;
+    margin-top: 10px;
+    /* outline: 1px solid red; */
+  }
+  .questionsBox > .questTxt{
+    margin-left: 28px; /*80이 오른쪽에 붙음*/
+    /* outline: 1px solid red; */
+  }
+  .questTxt h3{
+    font-size: 30px;
+  }
+  .questTxt h4{
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  .questTxt > .phoneNumber{
+    margin-top: 10px;
+    width: 38%; /*170px*/
+    height: 25px;
+  }
+  .questTxt p:nth-child(2){
+    margin-top: 25px;
+    font-size: 14px;
+    letter-spacing: 9px;
+    line-height: 20px;
+  }
+  .questTxt > .phoneNumber p{
+    font-size: 10px;
+    padding: 6px 11px;
+  }
+  .questTxt > .more{
+    margin-top: 25px;
+  }
+  .questTxt > .more p{
+    font-size: 14px;
+    margin-top: 7px;
+  }
+
+  /*footer*/
+  .footerBox > .footerTxt > .footer_percent{
+    width: 75%;
+    margin-left: 48px;
+  }
+  footer > .all > .blue{
+    font-size: 16px;
+  }
+  .footer_percent > .box1 p:nth-child(5){
+    font-size: 15px;
+  }
+  .footer_percent > .snsBox > .language{
+    width: 100%; /*180px*/
+    height: 40px;
+    border-radius: 20px;
+    background-color: #3d8bcd;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+  }
+  .footer_percent > .snsBox > .sns{
+    margin-top: 36px;
+  }
+  .all > .blue > .stand{
+    width: 15%;
+    bottom: -8px; right: 30px;
+  }
+  .all > .jellyLine p{
+    font-size: 14px;
+    margin-top: 10px;
+    letter-spacing: 4px;
+  }
+}
+
+
+/*브라우저의 넓이가 480px이하 일 때*/
+@media screen and (max-width: 480px){
+  .contain > video{
+    display: none;
+  }
+
+  /*adver*/
+  .adver > .thum{
+    width: 100%;
+    height: 970px;
+    position: absolute;
+    left: 50%; top: 0;
+    transform: translateX(-50%);
+    display: block;
+  }
+  .adver > .title{
+    position: absolute;   
+    top: 150px; /*110이 로고 아래 - 40*/
+    left: 50px;
+  }
+  .adver h1{
+    font-size: 45px;
+    margin-bottom: 20px; /*30*/
+  }
+  .adver p{
+    font-size: 20px;
+  }
+  .adver > .title > .more{
+    margin-top: 30px;
+  }
+  .adver > .title > .more p{
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  /*haribo_produce*/
+    /* .haribo_produce{
+    outline: 1px solid green;
+  } */
+  .haribo_produce > .produce_percent{
+    margin-left: 8px;
+  }
+  .haribo_produce h3{
+    font-size: 30px;
+    letter-spacing: 8px;
+  }
+  /* .meet{
+    outline: 1px solid blue;
+  } */
+  .meetHaribo > .txt{
+    margin-left: 24px;
+    /* outline: 1px solid green; */
+  }
+  /* .pro{
+    margin-left: 95px;
+    outline: 1px solid blue;
+  } */
+  .produce > .txt{
+    margin-left: 95px;
+    /* outline: 1px solid green; */
+  }
+
+  /*output*/
+  .output{
+    /* outline: 1px solid yellow; */
+    margin-top: 270px;
+  }
+  .output h2{
+    font-size: 76px;
+  }
+  .output p{
+    font-size: 22px;
+    line-height: 40px;
+    margin-top: 30px;
+  }
+  .output > .more{
+    margin-top: 40px;
+  }
+  
+  /*questions*/
+  .questions > .questionsBox{
+    width: 63%; /*777px*/
+    height: 370px;
+    top: 120px;
+    right: 30px;
+  }
+  .questionsBox > .questImg{
+    width: 27%; /*210px*/
+    margin-left: 25px;
+    margin-top: 10px;
+    /* outline: 1px solid red; */
+  }
+  .questionsBox > .questTxt{
+    margin-left: 28px; /*80이 오른쪽에 붙음*/
+    /* outline: 1px solid red; */
+  }
+  .questTxt h3{
+    font-size: 30px;
+  }
+  .questTxt h4{
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  .questTxt > .phoneNumber{
+    margin-top: 10px;
+    width: 38%; /*170px*/
+    height: 25px;
+  }
+  .questTxt p:nth-child(2){
+    margin-top: 25px;
+    font-size: 14px;
+    letter-spacing: 9px;
+    line-height: 20px;
+  }
+  .questTxt > .phoneNumber p{
+    font-size: 10px;
+    padding: 6px 11px;
+  }
+  .questTxt > .more{
+    margin-top: 25px;
+  }
+  .questTxt > .more p{
+    font-size: 14px;
+    margin-top: 7px;
+  }
+
+  /*footer*/
+  .footerBox > .footerTxt > .footer_percent{
+    width: 75%;
+    margin-left: 48px;
+  }
+  footer > .all > .blue{
+    font-size: 16px;
+  }
+  .footer_percent > .box1 p:nth-child(5){
+    font-size: 15px;
+  }
+  .footer_percent > .snsBox > .language{
+    width: 100%; /*180px*/
+    height: 40px;
+    border-radius: 20px;
+    background-color: #3d8bcd;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+  }
+  .footer_percent > .snsBox > .sns{
+    margin-top: 36px;
+  }
+  .all > .blue > .stand{
+    width: 15%;
+    bottom: -8px; right: 30px;
+  }
+  .all > .jellyLine p{
+    font-size: 14px;
+    margin-top: 10px;
+    letter-spacing: 4px;
+  }
+}

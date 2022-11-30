@@ -1,0 +1,138 @@
+@font-face{
+  font-family: 'NanumSquareNeo';
+  src: url(../font/NanumSquareNeo-bRg.ttf) format('truetype');
+}
+@font-face{
+  font-family: 'Cafe24Ssurround';
+  src: url(../font/Cafe24Ssurround.ttf) format('truetype');
+}
+
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: 0; color: inherit;}
+body{
+  font-family: 'NanumSquareNeo';
+  color: #111;
+  font-size: 16px;
+}
+
+
+/*===================================== menu ======================================*/
+.menu{
+  width: 100%;
+  height: 970px;
+  position: relative;
+  background-color: #005cb9;
+}
+.nav{ /* 도움 top 50안되고 스케일이 왼쪽으로 감*/
+  max-width: 1200px;
+  position: absolute;
+  top: 140px;
+  /* transform: translateY(-50%); */
+  /* left: 50%;
+  transform: translatex(-50%); */
+  left: 250px;
+  /* margin: auto; */
+  z-index: 999;
+  font-size: 35px;
+  color: #fff;
+  line-height: 80px;
+  font-family: 'Cafe24Ssurround';
+}
+.a0{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.a1 > .navclose{
+  /* position: absolute; */
+  top: -130px;
+}
+.a1 > .navclose:hover{
+  scale: 1.1;
+  cursor: pointer;
+}
+.navclose img{
+  width: 7%;
+  position: absolute;
+}
+.navclose > .close{
+  width: 3.3333%;
+  position: absolute;
+  left: 22px;
+  top: 24px;
+}
+
+
+.a2 > .info{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.menutxt p:hover{
+  color: #ffeb06;
+  cursor: pointer;
+}
+/* .photo{
+  width: 100%;
+} */
+.photo > .a1{
+  position: relative;
+}
+.photo > .a2,
+.photo > .a3,
+.photo > .a4,
+.photo > .a5,
+.photo > .a6,
+.photo > .a7,
+.photo > .a8{
+  width: 28%;
+  /* position: absolute; */
+  /* left: 0; top: 0; right: 0; bottom: 0; */
+}
+
+
+/*================================== header & contain ===================================*/
+.header{
+  width: 200px;
+  height: 50px;
+  background-color: #fff;
+  border: 2px solid #d9262d;
+  border-radius: 30px;
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  top: 50px;
+  right: 100px;
+}
+.header > .menuclick{
+  width: 180px;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  /* justify-content: center; */
+  font-size: 28px;
+  color: #d9262d;
+  font-family: 'Cafe24Ssurround';
+}
+.menuclick:hover{
+  color: #005cb9;
+  cursor: pointer;
+}
+.header .search{
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+}
+.searchBear{
+  width: 50px;
+  height: 80px;
+  position: absolute;
+  right: -10px; top: -18px;
+}
+
+.contain{
+  position:relative;
+}

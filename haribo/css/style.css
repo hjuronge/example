@@ -31,14 +31,14 @@ body{
   top: 0;
 }
 
-.wrap1{
+.menu{
   width: 100%;
   height: 970px;
   background-color: #005cb9;
   transition: all 5s;
 }
 
-.navBox{ /* 도움 ->  */
+.navBox{
   max-width: 1200px;
   height: 100%;
   margin: auto;
@@ -52,7 +52,6 @@ body{
   padding: 220px 0px;
   /* outline: 1px solid red; */
 }
-
 .navx > .navclose{
   position: relative;
   bottom: 150px;
@@ -86,8 +85,6 @@ body{
   color: #ffeb06;
   cursor: pointer;
 }
-/* .menutxt{
-} */
 .photo{
   width: 100%;
   position: absolute;
@@ -114,13 +111,13 @@ body{
   width: 100%;
   display:none;
 }
-
-.photo >.wrap > .a1{
+.photo >.wrap > .img1{
   display:block;
 }
-.menutxt p:nth-child(2) > .a2{
+.menutxt p:nth-child(2) > .img2{
   outline: 3px solid red;
 }
+
 
 /*================================== navMenu & contain ===================================*/
 .navMenu{
@@ -164,7 +161,7 @@ body{
 .contain{
   position:relative;
 }
-.contain > video{
+.thum > .thumImg{
   width: 100%;
   height: 970px;
   object-fit: cover;
@@ -179,7 +176,7 @@ body{
   position: absolute;
   color: #fff;
 }
-.adver > .thum{
+.thum > .thumImg{
   width: 100%;
   height: 970px;
   position: absolute;
@@ -451,7 +448,6 @@ body{
   color: #ffeb06;
   font-family: 'Cafe24Ssurround';
   /* -webkit-text-stroke: 1.5px #fff; */
-  /* text-shadow: 2px 2px 10px greenyellow; */
 }
 .output p{
   font-size: 35px;
@@ -859,7 +855,6 @@ footer > .all > .blue{
 
 /* 반응형 -> media 시작 !!! */ /*======================================*/
 
-
 /*브라우저의 넓이가 1200px이하 일 때*/
 @media screen and (max-width: 1200px){
   /*adver*/
@@ -899,6 +894,17 @@ footer > .all > .blue{
     cursor: pointer;
   }
 
+
+  /*haribo_produce*/
+  .haribo_produce{
+    max-width: 1200px;
+    position: absolute;
+    left: 0;
+    transform: translateX(0%);
+    /* outline: 1px solid violet; */
+  }
+
+  
   /*footer*/
   .footerBox > .footerTxt > .footer_percent{
     margin-left: 60px;
@@ -916,6 +922,7 @@ footer > .all > .blue{
     font-size: 19px;
   }
 }
+
 
 
 /*브라우저의 넓이가 980px이하 일 때*/
@@ -945,6 +952,7 @@ footer > .all > .blue{
   }
 
   /*haribo_produce*/
+
    /* .haribo_produce{
     outline: 1px solid green;
   } */
@@ -1036,20 +1044,28 @@ footer > .all > .blue{
 }
 
 
+
 /*브라우저의 넓이가 768px이하 일 때*/
 @media screen and (max-width: 768px){
   /*adver*/
+  .adver > .logo img{
+    width: 35%; /*300px*/
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 9;
+  }
   .adver > .title{
     position: absolute;
-    top: 150px; /*110이 로고 아래 - 40*/
+    top: 190px; /*110이 로고 아래 - 40*/
     left: 50px;
   }
   .adver h1{
-    font-size: 45px;
+    font-size: 50px;
     margin-bottom: 20px; /*30*/
   }
   .adver p{
-    font-size: 20px;
+    font-size: 22px;
   }
   .adver > .title > .more{
     margin-top: 30px;
@@ -1058,31 +1074,25 @@ footer > .all > .blue{
     font-size: 16px;
     margin-top: 5px;
   }
- 
+
   /*haribo_produce*/
+
    /* .haribo_produce{
     outline: 1px solid green;
   } */
   .haribo_produce > .produce_percent{
-    margin-left: 8px;
+    margin-left: 28px;
   }
   .haribo_produce h3{
     font-size: 30px;
     letter-spacing: 8px;
   }
-  /* .meet{
-    outline: 1px solid blue;
+  /* .meetHaribo{
+    margin-left: 10px;
+    outline: 1px solid green;
   } */
-  .meetHaribo > .txt{
-    margin-left: 24px;
-    /* outline: 1px solid green; */
-  }
-  /* .pro{
-    margin-left: 95px;
-    outline: 1px solid blue;
-  } */
-  .produce > .txt{
-    margin-left: 95px;
+  .produce{
+    margin-left: 0%;
     /* outline: 1px solid green; */
   }
 
@@ -1188,91 +1198,251 @@ footer > .all > .blue{
 }
 
 
+
 /*브라우저의 넓이가 480px이하 일 때*/
-@media screen and (max-width: 480px){
-  .contain > video{
-    display: none;
+@media screen and (max-width: 480px){ /*바루가쟈*/
+  /*menu*/
+  .menu{
+    width: 100%;
+    height: 600px;
+  }
+  .navBox{
+    max-width: 1200px;
+    height: 100%;
+    font-size: 25px;
+    line-height: 48px;
+  }
+  .navx{
+    margin-top: -60px;
+  }
+  .navx > .navclose{
+    bottom: 90px;
+  }
+  .navclose img{
+    width: 10%;
+  }
+  .navclose > .close{
+    width: 3.6%;
+    left: 16px;
+    top: 17px;
+  }
+  .photo > .whiteLine{
+    width: 30%;
+    position: absolute;
+    right: 0; top: 60px;
+    transition: all 0.3s;
+  }
+  .photo > .wrap{
+    width: 30%;
+    position: absolute;
+    right: 0; top: 60px;
   }
 
-  /*adver*/
-  .adver > .thum{
-    width: 100%;
-    height: 970px;
+  .navMenu{
+    width: 140px;
+    height: 40px;
+    background-color: #fff;
+    border: 2px solid #d9262d;
+    border-radius: 30px;
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    top: 25px;
+    right: 100px;
+    margin-right: -70px;
+  }
+  .navMenu .search{
+    width: 24px;
+    height: 25px;
+    margin-left: 15px;
+    display: none;
+  }
+  .menup{
+    margin-left: -3px;
+    margin-top: 3px;
+  }
+  .searchBear{
+    width: 50px;
+    height: 80px;
     position: absolute;
-    left: 50%; top: 0;
+    right: -8px; top: -18px;
+  }
+
+  
+  /*adver*/
+  .thum > video{
+    display: none;
+  }
+  .thum > .thumImg{
+    max-width: 480px;
+    height: 600px; /*970 => 0*/
+    position: absolute;
+    top: -860px;
+    left: 50%;
     transform: translateX(-50%);
     display: block;
   }
+  .adver{
+    width: 100%;
+    height: 600px;
+    top: -860px; left:0;
+    position: absolute;
+    color: #fff;
+    /* outline: 1px solid red; */
+  }
+  .adver > .logo img{
+    width: 35%; /*300px*/
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 9;
+  }
   .adver > .title{
     position: absolute;   
-    top: 150px; /*110이 로고 아래 - 40*/
+    top: 115px; /*85이 로고 아래 - 40*/
     left: 50px;
   }
-  .adver h1{
-    font-size: 45px;
-    margin-bottom: 20px; /*30*/
+  .adver h1{ /*아래로*/
+    font-size: 35px;
+    margin-bottom: 11px; /*30*/
   }
   .adver p{
-    font-size: 20px;
+    font-size: 15px;
   }
   .adver > .title > .more{
-    margin-top: 30px;
+    margin-top: 10px;
   }
   .adver > .title > .more p{
     font-size: 16px;
     margin-top: 5px;
   }
   
+
   /*haribo_produce*/
-    /* .haribo_produce{
-    outline: 1px solid green;
-  } */
+  .haribo_produce{
+    padding: 100px 0px;
+    margin-top: -260px;
+    /* outline: 1px solid green; */
+  }
   .haribo_produce > .produce_percent{
-    margin-left: 8px;
+    margin-left: 10px;
   }
   .haribo_produce h3{
     font-size: 30px;
     letter-spacing: 8px;
   }
-  /* .meet{
-    outline: 1px solid blue;
-  } */
-  .meetHaribo > .txt{
-    margin-left: 24px;
+  .meet{
+    width: 88%;
+    margin-left: 15px;
+    /* outline: 1px solid blue; */
+  }
+  .meetHaribo{
+    width: 50%;
+    margin-left: -9px;
     /* outline: 1px solid green; */
   }
-  /* .pro{
-    margin-left: 95px;
-    outline: 1px solid blue;
-  } */
-  .produce > .txt{
-    margin-left: 95px;
+  .meetHaribo .txt{
+    margin-top: 10px;
+    width: 95%;
+    margin-left: 6px;
+    /* outline: 1px solid blue; */
+  }
+  .meetHaribo h3{
+    font-size: 25px;
+    letter-spacing: 3px;
+  }
+  .pro{
+    width: 86%;
+    margin-left: 18px;
+    /* outline: 1px solid blue; */
+  }
+  .produce{
+    width: 50%;
+    margin-right: 10px;
     /* outline: 1px solid green; */
+  }
+  .produce .txt{
+    width: 95%;
+    margin-left: 6px;
+    /* outline: 1px solid blue; */
+  }
+  .produce h3{
+    font-size: 25px;
+    letter-spacing: 3px;
+  }
+  .meetHaribo > .txt > .more img{
+    width: 8%; /*30px*/
+    height: 70%;
+    margin-right: 20px;
+    margin-top: 2px;
+  }
+  .meetHaribo > .txt > .more p{
+    font-size: 14px;
+    margin-top: 3px;
+    cursor: pointer;
+  }
+  .produce > .txt > .more img{
+    width: 8%; /*30px*/
+    height: 70%;
+    margin-right: 20px;
+    margin-top: 2px;
+  }
+  .produce > .txt > .more p{
+    font-size: 14px;
+    margin-top: 3px;
+    cursor: pointer;
   }
 
+
   /*output*/
+  .outputNumber{
+    position: relative;
+    top: 440px;
+    max-width: 480px;
+  }
+  .outputNumber > .numerBox > .mainjelly{
+    width: 100%;
+    height: 700px;
+    /* outline: 1px solid blue; */
+  }
+  .numerBox > .numberHover{
+    width: 100%;
+    height: 700px;
+  }
   .output{
+    width: 83%;
+    margin-top: 180px;
     /* outline: 1px solid yellow; */
-    margin-top: 270px;
   }
   .output h2{
-    font-size: 76px;
+    font-size: 57px;
   }
   .output p{
-    font-size: 22px;
-    line-height: 40px;
     margin-top: 30px;
+    font-size: 19px;
+    line-height: 36px;
+    letter-spacing: -1px;
   }
   .output > .more{
-    margin-top: 40px;
+    margin-top: 20px;
+  }
+  .output > .more p{
+    font-size: 15px;
+    margin-top: 5px;
   }
   
+
   /*questions*/
+  .questions{
+    top: 240px;
+  }
   .questions > .questionsBox{
-    width: 63%; /*777px*/
+    width: 65%; /*777px*/
     height: 370px;
+    border: 5px solid rgba(123,193,37,0.7);
+    border-radius: 70px;
     top: 120px;
-    right: 30px;
+    right: 15px;
   }
   .questionsBox > .questImg{
     width: 27%; /*210px*/
@@ -1282,10 +1452,11 @@ footer > .all > .blue{
   }
   .questionsBox > .questTxt{
     margin-left: 28px; /*80이 오른쪽에 붙음*/
+    /* margin-top: 10px; */
     /* outline: 1px solid red; */
   }
   .questTxt h3{
-    font-size: 30px;
+    font-size: 25px;
   }
   .questTxt h4{
     font-size: 20px;
@@ -1293,60 +1464,103 @@ footer > .all > .blue{
   }
   .questTxt > .phoneNumber{
     margin-top: 10px;
-    width: 38%; /*170px*/
+    width: 73%; /*170px*/
     height: 25px;
   }
-  .questTxt p:nth-child(2){
-    margin-top: 25px;
-    font-size: 14px;
-    letter-spacing: 9px;
-    line-height: 20px;
-  }
   .questTxt > .phoneNumber p{
-    font-size: 10px;
+    font-size: 12px;
     padding: 6px 11px;
+  }
+  .questTxt p:nth-child(2){
+    margin-top: 20px;
+    font-size: 14px;
+    letter-spacing: 7px;
+    line-height: 20px;
   }
   .questTxt > .more{
     margin-top: 25px;
   }
+  .questTxt > .more img{
+    width: 9%; /*35px*/
+    margin-right: 30px;
+  }
   .questTxt > .more p{
     font-size: 14px;
     margin-top: 7px;
+    letter-spacing: 2px;
   }
+  .questions > .mic{
+    width: 35%; /*380px*/
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+  }
+
+
+  /*product*/
+  .product{
+    margin-top: 242px;
+    /* outline: 1px solid red; */
+  }
+  .flipBox > video{
+    width: 23.333%; /*280px*/
+    border-radius: 20px;
+  }
+  .flipCard1 > .front1,
+  .flipCard1 > .back1,
+  .flipCard2 > .front2,
+  .flipCard2 > .back2,
+  .flipCard3 > .front3,
+  .flipCard3 > .back3{
+    border-radius: 20px;
+  }
+
 
   /*footer*/
   .footerBox > .footerTxt > .footer_percent{
-    width: 75%;
-    margin-left: 48px;
+    width: 95%;
+    margin-left: 12px;
+    /* outline: 1px solid yellowgreen; */
   }
   footer > .all > .blue{
-    font-size: 16px;
+    font-size: 12px;
   }
   .footer_percent > .box1 p:nth-child(5){
-    font-size: 15px;
+    font-size: 10px;
   }
   .footer_percent > .snsBox > .language{
-    width: 100%; /*180px*/
+    width: 92%; /*180px*/
     height: 40px;
-    border-radius: 20px;
-    background-color: #3d8bcd;
-    border: none;
-    color: #fff;
-    font-size: 15px;
-    padding: 10px;
-    cursor: pointer;
-    border: none;
+  }
+  .blueBear{
+    font-size: 20px;
+  }
+  .sns > .blueBear img{
+    width: 80%;
   }
   .footer_percent > .snsBox > .sns{
-    margin-top: 36px;
+    margin-top: 30px;
+  }
+  .sns > .blueBear:nth-child(1) i{
+    position: absolute;
+    left: 19px;
+    top: 22px;
+  }
+  .sns > .blueBear:nth-child(2) i{
+    position: absolute;
+    right: 33px;
+    top: 22px;
   }
   .all > .blue > .stand{
-    width: 15%;
+    width: 20.5%;
     bottom: -8px; right: 30px;
   }
   .all > .jellyLine p{
     font-size: 14px;
     margin-top: 10px;
-    letter-spacing: 4px;
+    letter-spacing: 0px;
+  }
+  .jellyLine > .txt .hide{
+    letter-spacing: 1px;
   }
 }

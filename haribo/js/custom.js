@@ -18,7 +18,7 @@ jQuery(document).ready(function($){
     //모든 탭콘텐츠 요소를 제거
   })
 
-  //.close 클릭 시 //
+  //.close 클릭 시 // 도움!
   $(".close").click(function(){
     $(".wrap1").css("display","none");
     //.modal을 화면에서 제거

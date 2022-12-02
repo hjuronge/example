@@ -19,11 +19,25 @@ body{
 
 
 /*===================================== menu ======================================*/
-.menu{
+.header{
+  width: 100%;
+  height: 970px;
+  position: fixed;
+  top: -970px; left: 0;
+  z-index: 999;
+  transition: all 0.8s;
+ }
+.header.on{
+  top: 0;
+}
+
+.wrap1{
   width: 100%;
   height: 970px;
   background-color: #005cb9;
+  transition: all 5s;
 }
+
 .navBox{ /* 도움 ->  */
   max-width: 1200px;
   height: 100%;
@@ -91,22 +105,25 @@ body{
 .photo:hover > .whiteLine{
   scale: 1.1;
 }
-.photo > .a1,
-.photo > .a2,
-.photo > .a3,
-.photo > .a4,
-.photo > .a5,
-.photo > .a6,
-.photo > .a7,
-.photo > .a8{
+.photo > .wrap{
   width: 28%;
   position: absolute;
   right: 0;
 }
+.photo > .wrap > img{
+  width: 100%;
+  display:none;
+}
 
+.photo >.wrap > .a1{
+  display:block;
+}
+.menutxt p:nth-child(2) > .a2{
+  outline: 3px solid red;
+}
 
-/*================================== header & contain ===================================*/
-.header{
+/*================================== navMenu & contain ===================================*/
+.navMenu{
   width: 200px;
   height: 50px;
   background-color: #fff;
@@ -118,7 +135,7 @@ body{
   top: 50px;
   right: 100px;
 }
-.header > .menuclick{
+.navMenu > .menuclick{
   width: 180px;
   display: flex;
   align-items: center;
@@ -132,7 +149,7 @@ body{
   color: #005cb9;
   cursor: pointer;
 }
-.header .search{
+.navMenu .search{
   width: 25px;
   height: 25px;
   margin-left: 15px;
@@ -180,7 +197,7 @@ body{
 .adver > .title{
   position: absolute;
   z-index: 10;
-  top: 210px; /*130이 로고 아래 - 80*/
+  top: 200px; /*130이 로고 아래 - 70*/
   left: 100px;
 }
 .adver h1{
@@ -188,7 +205,7 @@ body{
   color: #d9262d;
   -webkit-text-stroke: 1.5px #fff;
   font-family: 'Cafe24Ssurround';
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 .adver p{
   font-size: 35px;
@@ -500,7 +517,7 @@ body{
 .questions > .transparency{
   width: 100%;
   height: 600px;
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(255,255,255,0.7);
   position: absolute;
 }
 .questions > .mainJelly{

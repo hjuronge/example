@@ -12,14 +12,14 @@
 <!--외부정의 css-->
 <link href="css/style.css" rel="stylesheet">
 
-<!--외부정의 js-->
-<script src="js/custom.js"></script>
-
 <!--jQuery 라이브러리-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
 <!--jquery UI-->
 <script src="js/jquery-ui.min.js"></script>
+
+<!--외부정의 js-->
+<script src="js/custom.js"></script>
 
 <!--라이트박스 css-->
 <link href="css/lightbox.min.css" rel="stylesheet">
@@ -28,8 +28,8 @@
 </head>
 
 <body>
-  <div class="menuNav">
-    <div class="menu"><!--100%-->
+  <div class="header">
+    <div class="wrap1"><!--100% blue-->
       <div class="navBox"><!--1200px---->
         <div class="nav"><!--100%-->
           <div class="navx">
@@ -37,8 +37,8 @@
               <img src="img/whitebear.png" alt="">
               <img class="close" src="img/close.png" alt="">
             </div>
-          </div>
-          <div class="navpop">
+          </div><!--navx END-->
+          <div class="navpop"><!--100%-->
             <div class="info"><!--100%-->
               <div class="menutxt">
                 <p>About us</p>
@@ -52,29 +52,33 @@
               </div>
               <div class="photo">
                 <img class="whiteLine" src="img/whiteline.png" alt="">
-                <img class="a1" src="img/aboutus1.png" alt="">
-                <img class="a2" src="img/goods2.png" alt="">
-                <img class="a3" src="img/produce3.png" alt="">
-                <img class="a4" src="img/quality4.png" alt="">
-                <img class="a5" src="img/history5.png" alt="">
-                <img class="a6" src="img/faq6.png" alt="">
-                <img class="a7" src="img/contactUs7.png" alt="">
-                <img class="a8" src="img/corporate8.png" alt="">
+                <div class="wrap">
+                  <img class="a1 tab-content" src="img/corporate8.png" alt="">
+                  <img class="a2 tab-content" src="img/contactUs7.png" alt="">
+                  <img class="a3 tab-content" src="img/faq6.png" alt="">
+                  <img class="a4 tab-content" src="img/history5.png" alt="">
+                  <img class="a5 tab-content" src="img/quality4.png" alt="">
+                  <img class="a6 tab-content" src="img/produce3.png" alt="">
+                  <img class="a7 tab-content" src="img/goods2.png" alt="">
+                  <img class="a8 tab-content" src="img/aboutus1.png" alt="">
+                </div>
               </div>
             </div>
-          </div>
-        </div><!--a0-->
-      </div><!--nav 끝-->
-    </div><!--menu 끝-->
-  </div>
+          </div><!--navpop END-->
+        </div><!--nav END-->
+      </div><!--navBox END-->
+    </div><!--wrap END-->
+  
 
-  <div class="header">
-    <div class="menuclick">
-      <p class="menup">Menu</p>
-      <img class="search" src="img/search.png" alt="">
-    </div>
-    <img class="searchBear" src="img/bear4.png" alt="">
+    <div class="navMenu">
+      <div class="menuclick">
+        <p class="menup">Menu</p>
+        <img class="search" src="img/search.png" alt="">
+      </div>
+      <img class="searchBear" src="img/bear4.png" alt="">
+    </div><!--navMenu END-->
   </div><!--header END-->
+
 
   <div id="wrap"><!--wrap 시작-->
     <section class="contain">

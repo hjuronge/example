@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>jQuery abScrollBar Examples</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.abScrollBar-v1.2.min.js"></script>
+
+
+<style type="text/css">
+* { margin:0; padding:0; }
+body { background:#0c91e8; color:#333; font-family: 'Inter'; }
+ul,li { list-style:none; }
+p { word-wrap:break-word; }
+img { border:0; vertical-align:middle; }
+a { color:#eef7fe; text-decoration:none; }
+a:hover { color:#fff; text-decoration:none; }
+.container { margin: 50px auto; max-width: 960px; text-align: center; color: #fff; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>jQuery abScrollBar Examples</h1>
+<style>
+.download{ padding: 1.25rem; border:0; border-radius:3px; background-color:#4F46E5; color:#fff;cursor:pointer; text-decoration:none;}.download:hover{color: #fff}#carbonads{display:block;overflow:hidden;max-width:728px;position:relative;font-size:22px;box-sizing:content-box}#carbonads>span{display:block}#carbonads a{color:#4F46E5;text-decoration:none}#carbonads a:hover{color:#4F46E5}.carbon-wrap{display:flex;align-items:center}.carbon-img{display:block;margin:0;line-height:1}.carbon-img img{display:block;height:90px;width:auto}.carbon-text{display:block;padding:0 1em;line-height:1.35;text-align:left}.carbon-poweredby{display:block;position:absolute;bottom:0;right:0;padding:6px 10px;text-align:center;text-transform:uppercase;letter-spacing:.5px;font-weight:600;font-size:8px;border-top-left-radius:4px;line-height:1;color:#aaa!important}@media only screen and (min-width:320px) and (max-width:759px){.carbon-text{font-size:14px}}
+</style>
+<div id="carbon-block" style="margin:20px auto"></div>
+<div style="margin:20px auto"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2783044520727903"
+     crossorigin="anonymous"></script>
+<!-- jQuery_Replace_Demo -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2783044520727903"
+     data-ad-slot="7325992188"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<p style="margin:2rem auto"><a class="download" href="https://www.jqueryscript.net/text/truncate-ellipsis-width.html">Download This Plugin</a> <a class="download" href="https://www.jqueryscript.net/">Back To jQueryScript</a></p>
+<p class="lead">The jQuery abScrollBar plugin allows you to add a scrollbar-like appearance to any div container on your web page.</p>
+</div>
+
+<!-- demo1 -->
+<style type="text/css">
+
+.abScrollBar-main { width:320px; height:465px; margin:0 auto; background:#222; border:1px solid #fff; border-radius:30px; box-shadow:0px 4px 10px 0px rgb(16 124 195); }
+.abScrollBar-box { width: 320px; height:400px; margin:30px 0 0 0; background:#fff; overflow: hidden; position: relative; }
+	.abScrollBar-box .content { color: #555; padding: 0px 30px; background: #fafafa; }
+		.abScrollBar-box .content p { line-height: 24px; font-size:14px; padding:15px 0; text-indent:2em; border-bottom:1px solid #f5f5f5; }
+
+	.abScrollBar-box .bar-bg { background:#fafafa; }
+	.abScrollBar-box .bar { background:#4ad585; }
+
+</style>
+<div class="abScrollBar-main">    
+    <div class="abScrollBar-box">
+        <div class="content">
+            <p style="color:#4ad585; font-size:15px; font-style:italic; font-weight:bold;">jQueryScript.Net</p>
+            <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.</p>
+            <p>JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. </p>
+            <p>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+            <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript. </p>
+            <p>Angular is a TypeScript-based free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS. </p>
+            <p>React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies.</p>
+            <p>Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications. It was created by Evan You, and is maintained by him and the rest of the active core team members. </p>
+            <p>Node.js is an open-source server environment. Node.js is cross-platform and runs on Windows, Linux, Unix, and macOS. Node.js is a back-end JavaScript runtime environment. Node.js runs on the V8 JavaScript Engine and executes JavaScript code outside a web browser. </p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function () {
+    abScrollBar({
+        scrollType: "y",
+        contentEl: ".content",
+        barClass: "bar",
+        barBgClass: "bar-bg",
+        width: 320,
+        height: 400,
+        barWidth: 10,
+        isHideBar: true,
+        mousewheelStep: 30
+    });
+});
+</script>
+
+<div style="height:80px;"></div>
+
+
+
+
+
+
+<div style="text-align:center;font-style:italic;letter-spacing:.05em;color:#183b52;"><h2 style="font-size:24px;height:120px;line-height:120px;font-weight:bold;">Vertical Scrollbar</h2></div>
+
+<!-- demo 2 -->
+<style type="text/css">
+
+.abScrollBar-main2 { width:620px; height:125px; margin:0 auto; background:#fff; border:1px solid #fff; border-radius:30px; box-shadow:0px 4px 10px 0px rgb(16 124 195); }
+.abScrollBar-box2 { width:560px; height:125px; padding:0 30px; background:#fff; overflow: hidden; position: relative; border-radius:30px; }
+	.abScrollBar-box2 .content2 { color: #555; }
+		.abScrollBar-box2 .content2 p { float: left; line-height:125px; padding:0 15px 0 0; font-size:14px; border-bottom:1px solid #f5f5f5; }
+	.abScrollBar-box2 .bar2-bg { background:#fafafa; }
+    .abScrollBar-box2 .bar2 { background:#4ad585; }
+
+</style>
+<div class="abScrollBar-main2">    
+    <div class="abScrollBar-box2">
+        <div class="content2">
+            <p style="color:#4ad585; font-size:15px; font-style:italic; font-weight:bold;">jQueryScript.Net</p>
+            <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.</p>
+            <p>JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. </p>
+            <p>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+            <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript. </p>
+            <p>Angular is a TypeScript-based free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS. </p>
+            <p>React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies.</p>
+            <p>Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications. It was created by Evan You, and is maintained by him and the rest of the active core team members. </p>
+            <p>Node.js is an open-source server environment. Node.js is cross-platform and runs on Windows, Linux, Unix, and macOS. Node.js is a back-end JavaScript runtime environment. Node.js runs on the V8 JavaScript Engine and executes JavaScript code outside a web browser. </p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+	abScrollBar({
+        scrollType: "x",
+		contentEl: ".content2",
+		barClass: "bar2",
+        barBgClass: "bar2-bg",
+		width: 560,
+		height: 125,
+		barHeight: 10,
+		isHideBar: true,
+		mousewheelStep: 30
+	});
+});
+</script>
+
+
+<div style="height:80px;"></div>
+
+
+
+<div style="text-align:center;font-style:italic;letter-spacing:.05em;color:#183b52;"><h2 style="font-size:24px;height:120px;line-height:120px;font-weight:bold;">Always Shown</h2></div>
+
+<!-- demo 3 -->
+<style type="text/css">
+
+.abScrollBar-main3 { width:320px; height:465px; margin:0 auto; background:#fff; border:1px solid #fff; border-radius:30px; box-shadow:0px 4px 10px 0px rgb(16 124 195); }
+.abScrollBar-box3 { width: 320px; height:400px; margin:30px 0 0 0; background:#fff; overflow: hidden; position: relative; }
+	.abScrollBar-box3 .content3 { color: #555; padding: 0px 30px; }
+		.abScrollBar-box3 .content3 p { line-height: 24px; font-size:14px; padding:15px 0; text-indent:2em; border-bottom:1px solid #f5f5f5; }
+
+	.abScrollBar-box3 .bar3-bg { background:#fafafa; }
+	.abScrollBar-box3 .bar3 { background:#4ad585; }
+
+</style>
+<div class="abScrollBar-main3">    
+    <div class="abScrollBar-box3">
+        <div class="content3">
+            <p style="color:#4ad585; font-size:15px; font-style:italic; font-weight:bold;">jQueryScript.Net</p>
+            <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.</p>
+            <p>JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. </p>
+            <p>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+            <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript. </p>
+            <p>Angular is a TypeScript-based free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS. </p>
+            <p>React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies.</p>
+            <p>Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications. It was created by Evan You, and is maintained by him and the rest of the active core team members. </p>
+            <p>Node.js is an open-source server environment. Node.js is cross-platform and runs on Windows, Linux, Unix, and macOS. Node.js is a back-end JavaScript runtime environment. Node.js runs on the V8 JavaScript Engine and executes JavaScript code outside a web browser. </p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function () {
+    abScrollBar({
+        scrollType: "y",
+        contentEl: ".content3",
+        barClass: "bar3",
+        barBgClass: "bar3-bg",
+        width: 320,
+        height: 400,
+        barWidth: 10,
+        isHideBar: false,
+        mousewheelStep: 30
+    });
+});
+</script>
+
+
+<div style="height:80px;"></div>
+
+
+
+
+
+
+<div style="text-align:center;font-style:italic;letter-spacing:.05em;color:#183b52;"><h2 style="font-size:24px;height:120px;line-height:120px;font-weight:bold;">Always Shown 2</h2></div>
+
+<!-- demo 4 -->
+<style type="text/css">
+
+.abScrollBar-main4 { width:620px; height:125px; margin:0 auto; background:#fff; border:1px solid #fff; border-radius:30px; box-shadow:0px 4px 10px 0px rgb(16 124 195); }
+.abScrollBar-box4 { width:560px; height:125px; padding:0 30px; background:#fff; overflow: hidden; position: relative; border-radius:30px; }
+	.abScrollBar-box4 .content4 { color: #555; }
+		.abScrollBar-box4 .content4 p { float: left; line-height:125px; padding-right:15px; font-size:14px; border-bottom:1px solid #f5f5f5; }
+	.abScrollBar-box4 .bar4-bg { background:#fafafa; }
+    .abScrollBar-box4 .bar4 { background:#4ad585; }
+
+</style>
+<div class="abScrollBar-main4">    
+    <div class="abScrollBar-box4">
+        <div class="content4">
+            <p style="color:#4ad585; font-size:15px; font-style:italic; font-weight:bold;">jQueryScript.Net</p>
+            <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.</p>
+            <p>JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. </p>
+            <p>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+            <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript. </p>
+            <p>Angular is a TypeScript-based free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS. </p>
+            <p>React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies.</p>
+            <p>Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications. It was created by Evan You, and is maintained by him and the rest of the active core team members. </p>
+            <p>Node.js is an open-source server environment. Node.js is cross-platform and runs on Windows, Linux, Unix, and macOS. Node.js is a back-end JavaScript runtime environment. Node.js runs on the V8 JavaScript Engine and executes JavaScript code outside a web browser. </p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+	abScrollBar({
+        scrollType: "x",
+		contentEl: ".content4",
+		barClass: "bar4",
+        barBgClass: "bar4-bg",
+		width: 560,
+		height: 125,
+		barHeight: 10,
+		isHideBar: false,
+		mousewheelStep: 30
+	});
+});
+</script>
+<div style="height:80px;"></div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1VDDWMRSTH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1VDDWMRSTH');
+</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+</body>
+</html>

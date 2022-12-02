@@ -1,39 +1,26 @@
 jQuery(document).ready(function($){
   // 메뉴 토글 버튼 //
-  //open/close primary navigation 기본 탐색 열기/닫기
-  $('.menuclick').on('click', function(){
-    $('.menup').toggleClass('is-clicked'); 
-    $('.header').toggleClass('menu-is-open');
-    
-    //in firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
-    //firefox에서 전환은 상위 오버플로가 변경될 때 중단되므로 전환이 끝날 때까지 기다려야 본문에 오버플로가 숨겨집니다.
-    if( $('.menuNav').hasClass('is-visible') ) {
-      $('.menuNav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
-        $('body').removeClass('overflow-hidden');
-      });
-    } else {
-      $('.menuNav').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
-        $('body').addClass('overflow-hidden');
-      });	
-    }
+  //open/close primary navigation 기본 탐색 열기/닫기 //도움
+  $(".menup").click(function(){
+    $(".header").toggleClass("on");
+  });
+
+  //메뉴 글씨 클릭 시 //
+  $(".menutxt > p").click(function(){
+    var i = $(this).index();
+    $(".photo > .wrap > img").css("display","none").eq(i).css("display","block");
+  });
+
+  $(".close").click(function(){
+    $(".photo > img").removeClass("active");
+    //모든 버튼에 active클래스 제거
+    $(".tab-content").css("display","none");
+    //모든 탭콘텐츠 요소를 제거
+  })
+
+  //.close 클릭 시 //
+  $(".close").click(function(){
+    $(".wrap1").css("display","none");
+    //.modal을 화면에서 제거
   });
 });
-
-/*
-  $('.cd-primary-nav-trigger').on('click', function(){
-    $('.cd-menu-icon').toggleClass('is-clicked'); 
-    $('.cd-header').toggleClass('menu-is-open');
-    
-    //in firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
-    //firefox에서 전환은 상위 오버플로가 변경될 때 중단되므로 전환이 끝날 때까지 기다려야 본문에 오버플로가 숨겨집니다.
-    if( $('.cd-primary-nav').hasClass('is-visible') ) {
-      $('.cd-primary-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
-        $('body').removeClass('overflow-hidden');
-      });
-    } else {
-      $('.cd-primary-nav').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
-        $('body').addClass('overflow-hidden');
-      });	
-    }
-  });
-*/

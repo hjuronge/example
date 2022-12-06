@@ -28,21 +28,32 @@ html, body {
   color: #111;
   position: relative;
   scroll-behavior: smooth;
+  background-color: #fff;
 }
 
+/* body{
+  padding-top: 70px;
+} */
 
-/*========================================  header  ========================================*/
-.header{
+
+/*========================================  nav-down  ========================================*/
+.nav-down{
   width: 100%;
   padding: 10px 0px;
   position: fixed;
+  top: 0;
   z-index: 999;
-  color: #fff;
   display: flex;
+  color: #fff;
   background-color: #d5c9dd;
+  transition: top 0.2s ease-in-out;
   /* outline: 1px solid red; */
 }
-.header > .nav{
+.nav-up{
+  top: -70px; /*헤더 높이와 같게*/
+}
+
+.nav-down > .nav{
   max-width: 1200px;
   margin: auto;
   display: flex;
@@ -178,17 +189,73 @@ ul:hover a:active {
 }
 
 .mainTitle{
+  width: 92%;
   position: absolute;
-  font-size: 50px;
+  font-size: 40px;
   color: #fff;
-  line-height: 90px;
+  line-height: 100px;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 999;
+  z-index: 990;
   text-align: center;
-  font-family: 'NanumSquareNeo';
+  /* font-family: 'NanumSquareNeo'; */
+}
+.mainTitle b{
+  color: #f8e392;
+  font-weight: normal;
+}
+.mainTitle p:nth-child(2){
+  font-size: 60px;
+  cursor: pointer;
+}
+.mainTitle p:nth-child(2):after {/*nth-child(2):after 가상요소*/
+  width: 38%;
+  margin: auto;
+  display:block;/*a요소를 블록 요소라고 선언*/
+  content: ''; /*comtent안은 밑줄 디자인을 위해 비워두세요.*/
+  border-bottom: solid 10px #f8e392;
+  /* padding-bottom: 2px; */
+  transform: scaleX(0); /*크기를 0으로 줌으로써 평상시엔 밑줄 없음*/
+  transition: transform 0.3s ease-in-out; /*변형 방식*/
+}
+.mainTitle p:nth-child(2):hover:after {
+  transform: scaleX(1); /*a 속성에 hover시 after를 기존 크기로 변경*/
 }
 
+@keyframes anime_textup{
+  0% { top: 0; }
+  20% { top: -0.3rem; }
+  40% { top: 0 }
+  60% { top: 0 }
+  80% { top: 0 }
+  100% { top: 0 }
+}
+ 
+.mainTitle span {
+    position: relative;
+    font-size: 55px;
+    animation: anime_textup 1.5s infinite;
+}
+
+.mainTitle span:nth-of-type(1) {
+    animation-delay: .1s;
+}
+
+.mainTitle span:nth-of-type(2) {
+    animation-delay: .2s;
+}
+
+.mainTitle span:nth-of-type(3) {
+    animation-delay: .3s;
+}
+
+.mainTitle span:nth-of-type(4) {
+    animation-delay: .4s;
+}
+
+.mainTitle span:nth-of-type(5) {
+    animation-delay: .5s;
+}
 
 /**/
 .title {
@@ -227,6 +294,7 @@ ul:hover a:active {
 }
 
 .estrela {
+  width: 100%;
   background-color: white;
   border-radius: 50%;
   position: absolute;
@@ -289,7 +357,7 @@ ul:hover a:active {
   border-radius: 50%;
   box-shadow: 0 0 160px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
   background-color: #fff;
-  animation-name: lua;
+  animation-name: moon;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-duration: 10s;
@@ -309,7 +377,7 @@ ul:hover a:active {
   opacity: 0.4;
 }
 
-.floresta {
+.floresta{
   width: 100%;
   height: 970px;
   position: relative;
@@ -317,12 +385,12 @@ ul:hover a:active {
   bottom: 0;
 }
 
-.floresta img {
+.floresta img{
   width: 100%;
   position: absolute;
+  /* bottom: 70px; */
   bottom: 0;
   left: 0;
-  top: 970;
   z-index: 10;
 }
 
@@ -413,7 +481,7 @@ ul:hover a:active {
 
 
 /*========================================  about  ========================================*/
-.about{
+#about{
   width: 100%;
   height: 970px;
   background-color: #333;
@@ -423,34 +491,164 @@ ul:hover a:active {
 
 
 /*========================================  skill  ========================================*/
-.skill{
+#skill{
   width: 100%;
-  height: 970px;
-  background-color: #f1f1f1;
+  /* height: 970px; */
+  /* padding: 200px 0px; */
+  position: absolute;
+  top: 1940px;
+  background-color: #fff;
+  /* outline: 1px solid red; */
+}
+#skill h2{
+  color: #9482A1;
+  font-size: 50px;
+  font-family: 'NEXONLv2GothicMedium';
+  margin-left: 175px;
+  margin-bottom: 20px; /*-20이 원래라서 40px*/
+}
+.skillgraph{
+  width: 100%;
+  padding: 440px 0px;
+  /* outline: 1px solid red; */
+}
+#skill .txt{
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+}
+.skillgraph > .txt p:last-child{ /*ㄱㄱ*/
+  width: 70%;
+  margin-top: 50px;
+  margin-left: 60px;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* outline: 1px solid red; */
+}
+
+.skillBar li{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  /* outline: 1px solid red; */
+}
+.skillBar li img{
+  width: 8%;
+  padding-top: 40px;
+  padding-right: 30px;
+  margin: auto;
+  /* outline: 1px solid red; */
+}
+
+.skillBar p{
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  /* color: #fff; */
+  line-height: 50px;
+}
+.skillBar p > span{
+  padding-left: 20px;
+  font-weight: bold;
+}
+.skillBar .bar{
+  width: 600px;
+  height: 15px;
+  background-color: #ddd;
+}
+.skillBar:nth-child(3){
+  height: 30px;
+}
+.skillBar .bar::after{ /*bar는 가상요소로 생성*/
+  content: "";
+  display: block;
+  height: 15px;
+  background-color: #d5c9dd;
+}
+.skillBar .b1::after{ /*bar는 가상요소로 생성*/
+  width: 90%;
+}
+.skillBar .b2::after{ /*bar는 가상요소로 생성*/
+  width: 80%;
+}
+.skillBar .b3::after{ /*bar는 가상요소로 생성*/
+  width: 95%;
+}
+.skillBar .b4::after{ /*bar는 가상요소로 생성*/
+  width: 90%;
+}
+.skillBar .b5::after{ /*bar는 가상요소로 생성*/
+  width: 75%;
+}
+.skillBar .b6::after{ /*bar는 가상요소로 생성*/
+  width: 75%;
+}
+
+/*스킬바가 채워지는 애니메이션 효과*/
+.fill .b1::after{animation: fill01 1s linear;}
+.fill .b2::after{animation: fill02 1s linear;}
+.fill .b3::after{animation: fill03 1s linear;}
+.fill .b4::after{animation: fill04 1s linear;}
+.fill .b5::after{animation: fill05 1s linear;}
+.fill .b6::after{animation: fill06 1s linear;}
+
+@keyframes fill01{ /*bar1*/
+  from{width: 0%;}
+  to{width: 90%;} /*도움 -> 그래프가 왜 채워졌다가 돌아옴? 90*/
+}
+@keyframes fill02{ /*bar2*/
+  from{width: 0%;}
+  to{width: 85%;}
+}
+@keyframes fill03{ /*bar3*/
+  from{width: 0%;}
+  to{width: 95%;}
+}
+@keyframes fill04{ /*bar4*/
+  from{width: 0%;}
+  to{width: 90%;}
+}
+@keyframes fill05{ /*bar5*/
+  from{width: 0%;}
+  to{width: 80%;}
+}
+@keyframes fill06{ /*bar6*/
+  from{width: 0%;}
+  to{width: 80%;}
 }
 
 
 /*========================================  portfolio  ========================================*/
-.portfolio{
+#portfolio{
   width: 100%;
   height: 970px;
   background-color: #666;
+  position: absolute;
+  top: 2910px;
 }
 
 /*========================================  contact  ========================================*/
-.contact{
+#contact{
   width: 100%;
   height: 970px;
   background-color: #fff;
+  position: absolute;
+  top: 3880px;
 }
 
 /*========================================  footer  ========================================*/
 .footer{
   width: 100%;
   padding: 40px 0px;
-  position: relative;
   background-color: #888;
   color: #fff;
+  position: absolute;
+  bottom: -4850px;
 }
 .footer p{
   position: absolute;

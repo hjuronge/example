@@ -9,12 +9,12 @@
   src: url(../font/NEXON\ Lv2\ Gothic\ Medium.ttf) format('truetype');
 }
 @font-face{
-  font-family: 'NanumSquareNeo';
-  src: url(../font/NanumSquareNeo-bRg.ttf) format('truetype');
+  font-family: 'LeferiPointSpecialItalic';
+  src: url(../font/LeferiPointSpecialItalic.ttf) format('truetype');
 }
 @font-face{
-  font-family: 'GmarketSans';
-  src: url(../font/GmarketSansTTFMedium.ttf) format('truetype');
+  font-family: 'LeferiBaseRegular';
+  src: url(../font/LeferiBaseRegular.ttf) format('truetype');
 }
 
 *{margin: 0; padding: 0;}
@@ -24,6 +24,7 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: 'NEXONLv2Gothic';
+  /* font-family: 'LeferiBaseRegular'; */
   font-size: 16px;
   color: #111;
   position: relative;
@@ -31,26 +32,22 @@ html, body {
   background-color: #fff;
 }
 
-/* body{
-  padding-top: 70px;
-} */
-
 
 /*========================================  nav-down  ========================================*/
 .nav-down{
   width: 100%;
-  padding: 10px 0px;
+  padding: 20px 0px;
   position: fixed;
   top: 0;
   z-index: 999;
   display: flex;
   color: #fff;
-  background-color: #d5c9dd;
+  background-color: rgb(0, 0, 0, 0.8);
   transition: top 0.2s ease-in-out;
   /* outline: 1px solid red; */
 }
 .nav-up{
-  top: -70px; /*헤더 높이와 같게*/
+  top: -100px; /*헤더 높이와 같게*/
 }
 
 .nav-down > .nav{
@@ -62,14 +59,13 @@ html, body {
   /* outline: 1px solid blue; */
 }
 .logo img{
-  width: 20%;
+  width: 30%;
 }
 .gnb{
   display: flex;
 }
 .gnb li{
-  /* margin-right: 50px; */
-  font-family: 'NEXONLv2GothicMedium';
+  font-family: 'LeferiPointSpecialItalic';
 }
 .gnb li:last-child{
   margin-right: 0;
@@ -78,11 +74,10 @@ html, body {
 /**/
 /* @import url(https://fonts.googleapis.com/css?family=Lato); */
 
-.blurry-menu {  
-  font-family: 'Lato', helvetica, arial, sans-serif;
+.blurry-menu {
   height: 50px;
 	margin: 40px 0;
-	padding: 50px 0;
+	/* padding: 50px 0; */
 	text-align: center;
 
 }
@@ -113,13 +108,13 @@ ul:after {
 
 .gnb a {
 	display: block;
-	font-size: 20px;
+	font-size: 30px;
 	height: 50px;
 	line-height: 50px;
-	padding: 0 35px;
+	padding: 0 40px;
 	position: relative;
 	text-decoration: none;
-	text-shadow: 0 1px 0 #555;	
+	text-shadow: 0 1px 0 #9482A1;;	
 	z-index: 2;
 	-webkit-transition: all 150ms linear;
 	-moz-transition: all 150ms linear;
@@ -134,16 +129,10 @@ a:focus {
 
 li:first-child a {
 	border-left: none;
-	/* -webkit-border-radius: 10px 0 0 10px;
-	-moz-border-radius: 10px 0 0 10px; */
-	/* border-radius: 10px 0 0 10px; */
 }
 
 li:last-child a {
 	border-right: none;
-	/* -webkit-border-radius: 0 10px 10px 0;
-	-moz-border-radius: 0 10px 10px 0;
-	border-radius: 0 10px 10px 0; */
 }
 
 ul:hover a {
@@ -154,6 +143,7 @@ ul:hover a {
 ul:hover a:hover {
 	/* background: #fafafa; */
   background: rgb(43, 32, 72);
+  /* padding-top: 5px; */
 	color: #fff;
 	line-height: 43px;
 	text-shadow: 0 1px 0 #fff;	
@@ -175,8 +165,9 @@ ul:hover a:active {
 }
 
 .top{
-  font-size: 60px;
+  font-size: 60px; /*색 변경*/
   color: #d5c9dd;
+  /* color: #ded221; */
   position: fixed;
   z-index: 80;
   bottom: 50px; right: 50px;
@@ -189,31 +180,33 @@ ul:hover a:active {
 }
 
 .mainTitle{
-  width: 92%;
+  width: 100%;
   position: absolute;
-  font-size: 40px;
-  color: #fff;
+  font-size: 45px;
+  color: #ded221;
   line-height: 100px;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   z-index: 990;
   text-align: center;
-  /* font-family: 'NanumSquareNeo'; */
 }
 .mainTitle b{
-  color: #f8e392;
+  color: #fff;
+  font-size: 65px;
   font-weight: normal;
+  font-family: 'LeferiPointSpecialItalic';
+  text-shadow: 0 0 15px #333, 0 0 15px #333, 0 0 15px #333, 0 0 15px #333,
+  0 0 15px #333, 0 0 15px #333, 0 0 15px #333, 0 0 15px #f1f1f1;
 }
 .mainTitle p:nth-child(2){
-  font-size: 60px;
   cursor: pointer;
 }
 .mainTitle p:nth-child(2):after {/*nth-child(2):after 가상요소*/
-  width: 38%;
+  width: 34%;
   margin: auto;
   display:block;/*a요소를 블록 요소라고 선언*/
   content: ''; /*comtent안은 밑줄 디자인을 위해 비워두세요.*/
-  border-bottom: solid 10px #f8e392;
+  border-bottom: solid 10px #fff;
   /* padding-bottom: 2px; */
   transform: scaleX(0); /*크기를 0으로 줌으로써 평상시엔 밑줄 없음*/
   transition: transform 0.3s ease-in-out; /*변형 방식*/
@@ -232,25 +225,25 @@ ul:hover a:active {
 }
  
 .mainTitle span {
-    position: relative;
-    font-size: 55px;
-    animation: anime_textup 1.5s infinite;
+  position: relative;
+  /* font-size: 55px; */
+  animation: anime_textup 1.5s infinite;
 }
 
 .mainTitle span:nth-of-type(1) {
-    animation-delay: .1s;
+  animation-delay: .1s;
 }
 
 .mainTitle span:nth-of-type(2) {
-    animation-delay: .2s;
+  animation-delay: .2s;
 }
 
 .mainTitle span:nth-of-type(3) {
-    animation-delay: .3s;
+  animation-delay: .3s;
 }
 
 .mainTitle span:nth-of-type(4) {
-    animation-delay: .4s;
+  animation-delay: .4s;
 }
 
 .mainTitle span:nth-of-type(5) {
@@ -413,19 +406,19 @@ ul:hover a:active {
 
 @keyframes estrelaDestacada {
   0% {
-    background-color: #FFFFFF;
+    background-color: #fff;
     box-shadow: 0 0 10px 0px rgba(255, 255, 255, 1);
   }
   20% {
-    background-color: #FFC4C4;
+    background-color: #ffc4c4;
     box-shadow: 0 0 10px 0px rgb(255, 196, 196, 1);
   }
   80% {
-    background-color: #C4CFFF;
+    background-color: #c4cfff;
     box-shadow: 0 0 10px 0px rgb(196, 207, 255, 1);
   }
   100% {
-    background-color: #FFFFFF;
+    background-color: #fff;
     box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.2);
   }
 }
@@ -480,68 +473,95 @@ ul:hover a:active {
 }
 
 
-/*========================================  about  ========================================*/
-#about{
+/*========================================  profile  ========================================*/
+#profile{
   width: 100%;
-  height: 970px;
-  background-color: #333;
+  /* background-color: #ccc; */
+  /* outline: 1px solid red; */
   position: absolute;
   top: 970px;
 }
 
+/*====================  about  ====================*/
+.about{
+  margin-top: 110px; /*100*/
+  max-width: 1200px;
+  position: absolute;
+  left: 50%; top: 0;
+  transform: translateX(-50%);
+  /* height: 500px; */
+  /* outline: 1px solid red; */
+}
+.aboutBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+.about h2{
+  color: #9482A1;
+  font-size: 50px;
+  font-family: 'LeferiPointSpecialItalic';
+  margin-top: -230px; /*160이 붙어있어서 70*/
+  /* outline: 1px solid red; */
+}
+.resume{
+  width: 100%;
+}
+.resume img{
+  width: 60%;
+  /* outline: 1px solid blue; */
+}
+.me{
+  width: 110%;
+  font-size: 20px;
+  /* outline: 1px solid blue; */
+}
+.me > div p:nth-child(1){
+  font-family: 'NEXONLv2GothicMedium';
+  font-size: 24px;
+}
+.me > div p:nth-child(2){
+  margin-top: 15px;
+}
+.me > .txt2,
+.me > .txt3{
+  margin-top: 20px;
+}
+.me > .txt3 p:nth-child(2){
+  line-height: 30px;
+}
 
-/*========================================  skill  ========================================*/
+
+/*====================  skill  ====================*/
 #skill{
   width: 100%;
-  /* height: 970px; */
-  /* padding: 200px 0px; */
   position: absolute;
-  top: 1940px;
-  background-color: #fff;
+  top: 700px; /*원래가 540인데 160*/
   /* outline: 1px solid red; */
+  margin-top: 100px; /*40+60= 100*/
+}
+.skillgraph{
+  max-width: 1200px;
+  margin: auto;
+  /* outline: 1px solid red; */
+}
+.skillBar{
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: auto;
 }
 #skill h2{
   color: #9482A1;
   font-size: 50px;
-  font-family: 'NEXONLv2GothicMedium';
-  margin-left: 175px;
-  margin-bottom: 20px; /*-20이 원래라서 40px*/
-}
-.skillgraph{
-  width: 100%;
-  padding: 440px 0px;
-  /* outline: 1px solid red; */
-}
-#skill .txt{
-  position: absolute;
-  left: 50%; top: 50%;
-  transform: translate(-50%, -50%);
-}
-.skillgraph > .txt p:last-child{ /*ㄱㄱ*/
-  width: 70%;
-  margin-top: 50px;
-  margin-left: 60px;
-  font-size: 25px;
-  letter-spacing: 1.5px;
+  font-family: 'LeferiPointSpecialItalic';
+  letter-spacing: 3px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  /* outline: 1px solid red; */
-}
-
-.skillBar li{
-  width: 100%;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  margin-right: 40px;
-  /* outline: 1px solid red; */
-}
-.skillBar li img{
-  width: 8%;
-  padding-top: 40px;
-  padding-right: 30px;
-  margin: auto;
+  margin-top: -140px; /*70이 붙어있어서 140*/
   /* outline: 1px solid red; */
 }
 
@@ -552,40 +572,103 @@ ul:hover a:active {
   /* color: #fff; */
   line-height: 50px;
 }
-.skillBar p > span{
-  padding-left: 20px;
-  font-weight: bold;
+.skillBar > .sbar{
+  width: 16.6666%;
+  /* outline: 1px solid green; */
+}
+
+.sbar:nth-child(1) img:hover,
+.sbar:nth-child(2) img:hover,
+.sbar:nth-child(3) img:hover,
+.sbar:nth-child(4) img:hover,
+.sbar:nth-child(5) img:hover,
+.sbar:nth-child(6) img:hover{
+  scale: 1.2;
+  /* cursor: pointer; */
+}
+.sbar:nth-child(1) img,
+.sbar:nth-child(2) img{
+  width: 30%;
+  margin-bottom: -30px; /*60이라 30*/
+  margin: auto;
+  margin-top: 10px;
+  transition: all 0.3s;
+  /* outline: 1px solid green; */
+}
+.sbar:nth-child(3) img,
+.sbar:nth-child(4) img,
+.sbar:nth-child(5) img{
+  width: 26%;
+  margin: auto;
+  margin-bottom: -30px; /*60이라 30*/
+  transition: all 0.3s;
+  /* outline: 1px solid green; */
+}
+.sbar:nth-child(6) img{
+  width: 60%;
+  margin-bottom: -30px; /*60이라 30*/
+  margin-top: 30px;
+  transition: all 0.3s;
+  /* outline: 1px solid green; */
+}
+.sbar:nth-child(1) > .sbarBox,
+.sbar:nth-child(2) > .sbarBox{
+  margin: auto;
+  margin-top: -17px;
+  /* outline: 1px solid green; */
+}
+.sbar:nth-child(6) > .sbarBox{
+  margin: auto;
+  margin-top: 24px;
+  /* outline: 1px solid green; */
+}
+
+.sbarBox{
+  width: 90%;
+  margin: auto;
+  margin-top: 10px; /*20이라 30*/
+  /* outline: 1px solid green; */
+}
+.sbarBox > .txt{
+  width: 160px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -10px; /*20줬음*/
 }
 .skillBar .bar{
-  width: 600px;
+  width: 160px;
   height: 15px;
+  border-radius: 5px;
   background-color: #ddd;
 }
-.skillBar:nth-child(3){
+
+
+.sbar:nth-child(3){
   height: 30px;
 }
-.skillBar .bar::after{ /*bar는 가상요소로 생성*/
+.sbar .bar::after{ /*bar는 가상요소로 생성*/
   content: "";
   display: block;
   height: 15px;
   background-color: #d5c9dd;
+  border-radius: 5px;
 }
-.skillBar .b1::after{ /*bar는 가상요소로 생성*/
+.sbar .b1::after{ /*bar는 가상요소로 생성*/
   width: 90%;
 }
-.skillBar .b2::after{ /*bar는 가상요소로 생성*/
+.sbar .b2::after{ /*bar는 가상요소로 생성*/
   width: 80%;
 }
-.skillBar .b3::after{ /*bar는 가상요소로 생성*/
+.sbar .b3::after{ /*bar는 가상요소로 생성*/
   width: 95%;
 }
-.skillBar .b4::after{ /*bar는 가상요소로 생성*/
+.sbar .b4::after{ /*bar는 가상요소로 생성*/
   width: 90%;
 }
-.skillBar .b5::after{ /*bar는 가상요소로 생성*/
+.sbar .b5::after{ /*bar는 가상요소로 생성*/
   width: 75%;
 }
-.skillBar .b6::after{ /*bar는 가상요소로 생성*/
+.sbar .b6::after{ /*bar는 가상요소로 생성*/
   width: 75%;
 }
 
@@ -632,13 +715,46 @@ ul:hover a:active {
   top: 2910px;
 }
 
+
 /*========================================  contact  ========================================*/
 #contact{
   width: 100%;
-  height: 970px;
-  background-color: #fff;
+  /* height: 100px; */
+  padding: 70px 0px;
   position: absolute;
-  top: 3880px;
+  top: 4000px;
+  /* outline: 1px solid blue; */
+}
+#contact h2{
+  color: #9482A1;
+  font-size: 50px;
+  font-family: 'LeferiPointSpecialItalic';
+  letter-spacing: 3px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -140px; /*70이 붙어있어서 140*/
+  /* outline: 1px solid red; */
+}
+#contact .sns{
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* outline: 1px solid red; */
+}
+.snsBox{
+  display: flex;
+  align-items: center;
+  margin-right: 70px;
+  font-size: 20px;
+  font-family: 'LeferiPointSpecialItalic';
+  color: #666;
+}
+.snsBox i{
+  margin-right: 30px;
+  font-size: 40px;
+  color: #d5c9dd;
 }
 
 /*========================================  footer  ========================================*/
@@ -648,7 +764,7 @@ ul:hover a:active {
   background-color: #888;
   color: #fff;
   position: absolute;
-  bottom: -4850px;
+  bottom: -3350px;
 }
 .footer p{
   position: absolute;

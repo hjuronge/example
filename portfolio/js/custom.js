@@ -87,11 +87,11 @@ function init(){
 // 스킬바가 채워지는 애니메이션 효과 //
   $(window).scroll(function(){ //브랄우저에 스크롤 이벤트 발생시
     var scroll = $(window).scrollTop();
-    var aboutTop = $("#skill").offset().top; //#skill의 top위치값보다 아래일 때
+    var aboutTop = $(".about").offset().top; //#about의 top위치값보다 아래일 때
     if(scroll >= aboutTop){
-      $(".sbar").addClass("fill"); //.sbar에 fill클래스 추가
+      $(".sbarBox").addClass("fill"); //.sbarBox에 fill클래스 추가
     }else{ //스크롤 위치가 aboutTop 위치보다 위일 때
-      $(".sbar").removeClass("fill"); //.sbar에 fill클래스 제거
+      $(".sbarBox").removeClass("fill"); //.sbarBox에 fill클래스 제거
     }
   });
 }

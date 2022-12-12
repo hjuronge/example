@@ -61,7 +61,7 @@ html, body {
   /* outline: 1px solid blue; */
 }
 .logo img{
-  width: 28%;
+  width: 26%;
 }
 .gnb{
   display: flex;
@@ -167,14 +167,13 @@ ul:hover a:active {
   font-size: 60px; /*색 변경*/
   /* color: #628cfc; */
   color: #ded221;
-
-	-webkit-box-shadow: inset 0 0 22px #e9e9e9;
-	-moz-box-shadow: inset 0 0 22px #e9e9e9;
-	box-shadow: inset 0 0 22px #e9e9e9;
-
   position: fixed;
   z-index: 80;
   bottom: 50px; right: 50px;
+}
+.top:hover{
+  text-shadow: 0 0 5px #666, 0 0 5px #666, 0 0 5px #666, 0 0 5px #666,
+  0 0 5px #666, 0 0 5px #666, 0 0 5px #666, 0 0 5px #666;
 }
 
 
@@ -737,23 +736,13 @@ ul:hover a:active {
   background-color: #628cfc;
   border-radius: 5px;
 }
-.sbar .b1::after{ /*bar는 가상요소로 생성*/
-  width: 90%;
-}
-.sbar .b2::after{ /*bar는 가상요소로 생성*/
-  width: 80%;
-}
-.sbar .b3::after{ /*bar는 가상요소로 생성*/
-  width: 95%;
-}
-.sbar .b4::after{ /*bar는 가상요소로 생성*/
-  width: 90%;
-}
-.sbar .b5::after{ /*bar는 가상요소로 생성*/
-  width: 75%;
-}
+.sbar .b1::after,
+.sbar .b2::after,
+.sbar .b3::after,
+.sbar .b4::after,
+.sbar .b5::after,
 .sbar .b6::after{ /*bar는 가상요소로 생성*/
-  width: 75%;
+  width: 100%;
 }
 
 /*스킬바가 채워지는 애니메이션 효과*/
@@ -764,9 +753,11 @@ ul:hover a:active {
 .fill .b5::after{animation: fill05 1s linear;}
 .fill .b6::after{animation: fill06 1s linear;}
 
+.fill .bar::after{animation-fill-mode: forwards;}
+
 @keyframes fill01{ /*bar1*/
   from{width: 0%;}
-  to{width: 90%;} /*도움 -> 그래프가 왜 채워졌다가 돌아옴? 90*/
+  to{width: 90%;}
 }
 @keyframes fill02{ /*bar2*/
   from{width: 0%;}
@@ -774,7 +765,7 @@ ul:hover a:active {
 }
 @keyframes fill03{ /*bar3*/
   from{width: 0%;}
-  to{width: 95%;}
+  to{width: 90%;}
 }
 @keyframes fill04{ /*bar4*/
   from{width: 0%;}
@@ -1067,4 +1058,16 @@ ul:hover a:active {
   left: 50%; top: 50%;
   transform: translate(-50%, -50%);
   letter-spacing: 0.5px;
+}
+
+/* 반응형 -> media 시작 !!! */ /*======================================*/
+
+/*브라우저의 넓이가 1200px이하 일 때*/
+@media screen and (max-width: 1200px){
+  /* .constelacao {
+    width: 100%;
+  } */
+  .noite {
+    width: 140%;
+  }
 }

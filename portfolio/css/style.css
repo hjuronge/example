@@ -267,14 +267,13 @@ ul:hover a:active {
   font-weight: 100;
 }
 
-.title .avatar {
+/* .title .avatar {
   width: 40px;
   height: 40px;
-  /* background-image: url(../img/avatar.jpg); */
   display: inline-block;
   border-radius: 50%;
   background-size: 100%;
-}
+} */
 
 .noite {
   background: -webkit-linear-gradient(top, rgb(0, 0, 0) 50%, rgb(25, 19, 39)80%, rgb(43, 32, 72));
@@ -348,7 +347,7 @@ ul:hover a:active {
 .meteoro.style3 { animation-name: meteoroStyle3; }
 .meteoro.style4 { animation-name: meteoroStyle4; }
 
-.lua {
+/* .lua {
   position: absolute;
   right: 200px;
   top: 150px;
@@ -361,9 +360,9 @@ ul:hover a:active {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-duration: 10s;
-}
+} */
 
-.lua .textura {
+/* .lua .textura {
   background-image: url(https://raw.githubusercontent.com/interaminense/starry-sky/master/src/img/bgMoon.png);
   background-position: center;
   background-size: 100%;
@@ -375,7 +374,7 @@ ul:hover a:active {
   border-radius: 50%;
   overflow: hidden;
   opacity: 0.4;
-}
+} */
 
 .floresta{
   width: 100%;
@@ -587,6 +586,7 @@ ul:hover a:active {
   position: absolute;
   top: 740px; /*원래가 610인데*/
   margin-top: 200px; /*60*/
+  font-family: 'LeferiPointSpecialItalic';
   /* outline: 1px solid red; */
 }
 .skillgraph{
@@ -599,7 +599,7 @@ ul:hover a:active {
   text-shadow: 0 0 8px #555, 0 0 8px #555, 0 0 8px #555, 0 0 8px #555,
   0 0 8px #555, 0 0 8px #555, 0 0 8px #555, 0 0 8px #555;
   font-size: 50px;
-  font-family: 'LeferiPointSpecialItalic';
+  /* font-family: 'LeferiPointSpecialItalic'; */
   letter-spacing: 3px;
   position: absolute;
   left: 50%;
@@ -713,7 +713,7 @@ ul:hover a:active {
   /* outline: 1px solid green; */
 }
 .sbarBox > .txt{
-  width: 160px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: -10px; /*20줬음*/
@@ -723,7 +723,7 @@ ul:hover a:active {
   color: #628cfc;
 }
 .skillBar .bar{
-  width: 160px;
+  width: 100%;
   height: 15px;
   border-radius: 5px;
   background-color: #ccc;
@@ -849,6 +849,11 @@ ul:hover a:active {
   margin-bottom: 20px;
 }
 
+.portfolioBox > .box > .over{
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 .portfolioBox > .box:nth-child(1) > .over{
   position: relative;
@@ -856,23 +861,27 @@ ul:hover a:active {
   /* outline: 1px solid blue; */
 }
 .portfolioBox > .box:nth-child(1) > .screen{
-  width: 668px;
-  height: 377px;
+  /* width: 668px;
+  height: 377px; */
+  width: 76.5%;
+  height: 13.7%;
   position: absolute;
-  left: 16px; top: 136px;
+  left: 111px; top: 137px;
   z-index: 3;
   overflow: hidden;
   /* outline: 1px solid red; */
 }
 .portfolioBox > .box:nth-child(1) > .screen img{
+  width: 100%;
   position: absolute;
-  left: 0px; top: 0;
+  left: 0px;
+  top: 0;
   z-index: -1;
   transition: all 8s;
 }
 .portfolioBox > .box:nth-child(1) > .screen img:hover{
   cursor: pointer;
-  top: -1150px;
+  top: -1311px;
 }
 /*box1*/
 
@@ -880,18 +889,19 @@ ul:hover a:active {
 .portfolioBox > .box:nth-child(2) > .over{
   position: relative;
   z-index: 2;
-
+  /* outline: 1px solid blue; */
 }
 .portfolioBox > .box:nth-child(2) > .screen{
-  width: 668px;
-  height: 378px;
+  width: 77.5%;
+  height: 13.76%;
   position: absolute;
-  left: 16px; top: 1100px;
+  left: 111px; top: 1149px;
   z-index: 3;
   overflow: hidden;
   /* outline: 1px solid red; */
 }
 .portfolioBox > .box:nth-child(2) > .screen img{
+  width: 100%;
   position: absolute;
   left: -9px; top: 0px;
   z-index: -1;
@@ -899,7 +909,7 @@ ul:hover a:active {
 }
 .portfolioBox > .box:nth-child(2) > .screen img:hover{
   cursor: pointer;
-  top: -1362px;
+  top: -1388px;
 }
 /*box2*/
 
@@ -907,17 +917,19 @@ ul:hover a:active {
 .portfolioBox > .box:nth-child(3) > .over{
   position: relative;
   z-index: 2;
+  /* outline: 1px solid blue; */
 }
 .portfolioBox > .box:nth-child(3) > .screen{
-  width: 668px;
-  height: 377px;
+  width: 77.4%;
+  height: 13.76%;
   position: absolute;
-  left: 16px; top: 2030px;
+  left: 111px; top: 2130px;
   z-index: 3;
   overflow: hidden;
   /* outline: 1px solid red; */
 }
 .portfolioBox > .box:nth-child(3) > .screen img{
+  width: 100%;
   position: absolute;
   left: -9px; top: 0px;
   z-index: -1;
@@ -925,7 +937,7 @@ ul:hover a:active {
 }
 .portfolioBox > .box:nth-child(3) > .screen img:hover{
   cursor: pointer;
-  top: -1279px;
+  top: -1328px;
 }
 /*box3*/
 
@@ -934,7 +946,7 @@ ul:hover a:active {
   width: 13%;
   height: 50px;
   position: absolute;
-  top: 908px; right: 0;
+  top: 950px; right: 90px;
   border: none;
   border-radius: 10px;
   font-size: 20px;
@@ -954,7 +966,7 @@ ul:hover a:active {
   width: 13%;
   height: 50px;
   position: absolute;
-  bottom: 970px; right: 0;
+  bottom: 1024px; right: 90px;
   border: none;
   border-radius: 10px;
   font-size: 20px;
@@ -971,11 +983,10 @@ ul:hover a:active {
 }
 
 .portfolioBox > .box:nth-child(3) > button{
-  width: 90px;
   width: 13%;
   height: 50px;
   position: absolute;
-  bottom: 6px; right: 0;
+  bottom: 6px; right: 90px;
   border: none;
   border-radius: 10px;
   font-size: 20px;
@@ -995,6 +1006,7 @@ ul:hover a:active {
 
 /*========================================  contact  ========================================*/
 #contact{
+  margin-top: 60px;
   width: 100%;
   padding-top: 230px;
   padding-bottom: 140px;
